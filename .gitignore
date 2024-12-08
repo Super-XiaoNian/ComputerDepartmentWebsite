@@ -1,0 +1,42 @@
+# IDE 和编辑器文件
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# 依赖目录
+node_modules/
+vendor/
+
+# 日志文件
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 环境文件
+.env
+.env.local
+.env.*.local
+
+# 构建输出
+dist/
+build/
+out/
+
+# 临时文件
+*.swp
+*.swo
+*~
+
+# 其他
+.cache/
+coverage/
+实训报告.docx
+说明.txt
+演示视频.mp4
+llsz.edu.cn/
