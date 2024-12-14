@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -7,9 +7,11 @@
           name="description">
     <meta content="吕梁师范高等专科学校, 吕梁师专, 计算机系, 教育" name="keywords">
     <title>吕梁师专 - 计算机系</title>
+    <link href="bootstrap/css/bootstrap-grid.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-utilities.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <script defer src="JavaScript/base.js"></script>
-<!--    <script defer src="JavaScript/ts.js"></script>-->
+    <!--    <script defer src="JavaScript/ts.js"></script>-->
     <link href="./images/favicon.png" rel="icon" type="image/png">
     <script defer src="JavaScript/11.js"></script>
 </head>
@@ -51,7 +53,7 @@
                                     <li><a href="javascript:void(0)">系部简介</a></li>
                                     <li><a href="javascript:void(0)">办学宗旨</a></li>
                                     <li><a href="javascript:void(0)">发展历程</a></li>
-                                    <li><a href="javascript:void(0)javascript:void(0)">荣誉成就</a></li>
+                                    <li><a href="javascript:void(0)">荣誉成就</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -132,7 +134,7 @@
                         </a>
                     </li>
                     <li class="video-slide">
-                        <video id="campus-video" muted preload="auto" playsinline>
+                        <video id="campus-video" muted playsinline preload="auto">
                             <source src="./videos/vido.mp4" type="video/mp4">
                             您的浏览器不支持 HTML5 视频。
                         </video>
@@ -154,10 +156,6 @@
     </div>
 </header>
 <div class="slideshow-placeholder"></div>
-<!--<div style="height: 100vh; background-color: #f0f0f0;">
-    &lt;!&ndash; 测试 &ndash;&gt;
-    <h1>占空白，用来测试</h1>
-</div>-->
 <section class="section news-section">
     <div class="page" id="page2">
         <div class="container">
@@ -190,14 +188,15 @@
                                         <p>
                                             2024年11月3日，吕梁高专计算机系分团委在11号楼307教室举办党的二十届三中全会精神宣讲会，青年学子齐聚一堂，深入学习党的最新理论成果，感悟时代脉搏</p>
                                         <div class="news-footer">
-                                            <a class="read-more" href="https://mp.weixin.qq.com/s/735tpj3fVfsZyx-3u4Xm8A" target="_blank">查看详情 →</a>
+                                            <a class="read-more"
+                                               href="https://mp.weixin.qq.com/s/735tpj3fVfsZyx-3u4Xm8A" target="_blank">查看详情
+                                                →</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </a>
-                            
-                        
+
 
                         <div class="news-card featured" data-category="teaching">
                             <div class="news-image">
@@ -207,7 +206,8 @@
                                     <p>
                                         为深入推进课程思政建设，提升教学质量，计算机系于11月12日在智慧教室举办了2024年教学改革研讨会。会议邀请了多位教育专家，就专业课程改革、教学方法创新等主题展开深入讨论...</p>
                                     <div class="news-footer">
-                                        <a class="read-more" href="https://mp.weixin.qq.com/s/vYi6baBrM8nuxnVA-2PBSw" target="_blank">查看详情 →</a>
+                                        <a class="read-more" href="https://mp.weixin.qq.com/s/vYi6baBrM8nuxnVA-2PBSw"
+                                           target="_blank">查看详情 →</a>
                                     </div>
                                 </div>
                             </div>
@@ -221,7 +221,8 @@
                                     <p>
                                         为了加深2024级新生班级间的相互了解，并强化班级内部的团队合作，同时丰富同学们的课余生活并传承体育竞技精神，我系于10月29日至11月7日期间，在二号楼后侧的户外篮球场上，成功举办了...</p>
                                     <div class="news-footer">
-                                        <a class="read-more" href="https://mp.weixin.qq.com/s/1rRycs_xcsjALOPyJ31_xA" target="_blank">查看详情 →</a>
+                                        <a class="read-more" href="https://mp.weixin.qq.com/s/1rRycs_xcsjALOPyJ31_xA"
+                                           target="_blank">查看详情 →</a>
                                     </div>
                                 </div>
                             </div>
@@ -258,7 +259,7 @@
                                     </div>
                                 </div>
                             </a>
-                            
+
                         </div>
                         <div class="news-card" data-category="teaching">
                             <div class="news-meta">
@@ -276,7 +277,7 @@
                                     </div>
                                 </div>
                             </a>
-                           
+
                         </div>
                         <div class="news-card" data-category="teaching">
                             <div class="news-meta">
@@ -294,7 +295,7 @@
                                     </div>
                                 </div>
                             </a>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -302,64 +303,200 @@
         </div>
     </div>
 </section>
-<section class="section news-section1">
-    <div id="third-main">
-        <div id="click-section">
-          <div id="drawerboxes">
-            <div class="drawerbox active">
-              <button class="drawer-btn active" onclick="slideTo(1)">校内风采</button>
+<!--
+<div style="height: 100vh; background-color: #f0f0f0;">
+    &lt;!&ndash; 测试 &ndash;&gt;
+    <h1>占空白，用来测试</h1>
+</div>
+-->
+
+<section class="campus-section">
+    <div class="campus-container container">
+        <div class="row g-0">
+            <!-- 左侧导航 -->
+            <div class="col-md-3">
+                <div class="category-nav">
+                    <div class="title-wrapper">
+                        <div class="title-decoration"></div>
+                        <h2 class="section-title">校园风采</h2>
+                    </div>
+                    <div class="category-list">
+                        <button class="category-btn category-active" data-category="environment">校园环境</button>
+                        <button class="category-btn" data-category="facility">教学设施</button>
+                        <button class="category-btn" data-category="activity">学生活动</button>
+                        <button class="category-btn" data-category="training">实训场所</button>
+                        <button class="category-btn" data-category="life">校园生活</button>
+                        <button class="category-btn" data-category="special">特色项目</button>
+                    </div>
+                </div>
             </div>
-            <div class="drawerbox">
-              <button class="drawer-btn" onclick="slideTo(2)">校内风采<span</button>
+
+            <!-- 右侧内容区 -->
+            <div class="col-md-9">
+                <div class="content-wrapper">
+                    <div class="content-container">
+                        <!-- 头部搜索和筛选 -->
+                        <div class="content-header">
+                            <div class="header-top">
+                                <h3 class="content-title">校园环境</h3>
+                            </div>
+                            <p class="content-subtitle current-category-desc">展示我校优美的校园环境和现代化教学设施</p>
+                        </div>
+
+                        <!-- 图片展示区 -->
+                        <div class="gallery-grid">
+                            <!-- 大图项目 -->
+                            <div class="gallery-item featured" data-category="environment">
+                                <div class="gallery-image-wrapper">
+                                    <img src="images/new_9.png" alt="主教学楼" class="gallery-img">
+                                    <div class="gallery-overlay">
+                                        <div class="overlay-content">
+                                            <h3 class="item-title">主教学楼</h3>
+                                            <p class="item-description">现代化的教学环境，为学生提供良好的学习场所</p>
+                                            <div class="item-meta">
+                                                <span class="view-count">浏览: 10086123</span>
+                                                <button class="share-btn">分享</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 普通图片项目 -->
+                            <div class="gallery-item" data-category="facility">
+                                <div class="gallery-image-wrapper">
+                                    <img src="images/new_9.png" alt="实验室" class="gallery-img">
+                                    <div class="gallery-overlay">
+                                        <div class="overlay-content">
+                                            <h3 class="item-title">计算机实验室</h3>
+                                            <p class="item-description">配备先进的实验设备</p>
+                                            <div class="item-meta">
+                                                <span class="view-count">浏览: 10086123</span>
+                                                <button class="share-btn">分享</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="gallery-item" data-category="facility">
+                                <div class="gallery-image-wrapper">
+                                    <img src="images/new_9.png" alt="实验室" class="gallery-img">
+                                    <div class="gallery-overlay">
+                                        <div class="overlay-content">
+                                            <h3 class="item-title">计算机实验室</h3>
+                                            <p class="item-description">配备先进的实验设备</p>
+                                            <div class="item-meta">
+                                                <span class="view-count">浏览: 10086123</span>
+                                                <button class="share-btn">分享</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-item" data-category="facility">
+                                <div class="gallery-image-wrapper">
+                                    <img src="images/new_9.png" alt="实验室" class="gallery-img">
+                                    <div class="gallery-overlay">
+                                        <div class="overlay-content">
+                                            <h3 class="item-title">计算机实验室</h3>
+                                            <p class="item-description">配备先进的实验设备</p>
+                                            <div class="item-meta">
+                                                <span class="view-count">浏览: 10086123</span>
+                                                <button class="share-btn">分享</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-item" data-category="facility">
+                                <div class="gallery-image-wrapper">
+                                    <img src="images/new_9.png" alt="实验室" class="gallery-img">
+                                    <div class="gallery-overlay">
+                                        <div class="overlay-content">
+                                            <h3 class="item-title">计算机实验室</h3>
+                                            <p class="item-description">配备先进的实验设备</p>
+                                            <div class="item-meta">
+                                                <span class="view-count">浏览: 10086123</span>
+                                                <button class="share-btn">分享</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-item" data-category="facility">
+                                <div class="gallery-image-wrapper">
+                                    <img src="images/new_9.png" alt="实验室" class="gallery-img">
+                                    <div class="gallery-overlay">
+                                        <div class="overlay-content">
+                                            <h3 class="item-title">计算机实验室</h3>
+                                            <p class="item-description">配备先进的实验设备</p>
+                                            <div class="item-meta">
+                                                <span class="view-count">浏览: 10086123</span>
+                                                <button class="share-btn">分享</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-item" data-category="facility">
+                                <div class="gallery-image-wrapper">
+                                    <img src="images/new_9.png" alt="实验室" class="gallery-img">
+                                    <div class="gallery-overlay">
+                                        <div class="overlay-content">
+                                            <h3 class="item-title">计算机实验室</h3>
+                                            <p class="item-description">配备先进的实验设备</p>
+                                            <div class="item-meta">
+                                                <span class="view-count">浏览: 10086123</span>
+                                                <button class="share-btn">分享</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery-item" data-category="facility">
+                                <div class="gallery-image-wrapper">
+                                    <img src="images/new_9.png" alt="实验室" class="gallery-img">
+                                    <div class="gallery-overlay">
+                                        <div class="overlay-content">
+                                            <h3 class="item-title">计算机实验室</h3>
+                                            <p class="item-description">配备先进的实验设备</p>
+                                            <div class="item-meta">
+                                                <span class="view-count">浏览: 10086123</span>
+                                                <button class="share-btn">分享</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- 加载更多按钮 -->
+                        <div class="load-more-wrapper">
+                            <button class="load-more-btn">加载更多</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="drawerbox">
-              <button class="drawer-btn" onclick="slideTo(3)">校内风采</button>
-            </div>
-            <div class="drawerbox">
-              <button class="drawer-btn" onclick="slideTo(4)">校内风采</button>
-            </div>
-          </div>
         </div>
-        <div id="slide-section">
-          <div id="slide-bar">
-            <div id="bar"></div>
-          </div>
-          <div id="card-section">
-            <div id="card1" class="third-card">
-              <div class="card-small-title">校内风采</div>
-              <div class="card-title">校内风采</div>
-              <div class="card-content">校内风采：“风起云涌，雨打风吹，一切皆有可能。”</div>
-              <div class="card-img">
-                <img src="./ComputerDepartmentWebsite-main/images/School_emable_index.png" alt="">
-              </div>
+    </div>
+
+    <!-- 图片预览模态框 -->
+    <div class="image-preview-modal">
+        <div class="modal-content">
+            <button class="modal-close">×</button>
+            <img src="" alt="" class="preview-image">
+            <div class="preview-info">
+                <h3 class="preview-title"></h3>
+                <p class="preview-description"></p>
+                <div class="preview-meta">
+                    <span class="preview-views"></span>
+                    <button class="preview-share">分享</button>
+                </div>
             </div>
-            <div id="card2" class="third-card">
-              <div class="card-small-title">校内风采</div>
-              <div class="card-title">校内风采</div>
-              <div class="card-content">校内风采：“风起云涌，雨打风吹，一切皆有可能。” </div>
-              <div class="card-img">
-                <img src="./img/08.gif" alt="">
-              </div>
-            </div>
-            <div id="card3" class="third-card">
-              <div class="card-small-title">校内风采</div>
-              <div class="card-title">校内风采</div>
-              <div class="card-content">校内风采：“风起云涌，雨打风吹，一切皆有可能。”</div>
-              <div class="card-img">
-                <img src="./img/03.gif" alt="">
-              </div>
-            </div>
-            <div id="card4" class="third-card">
-              <div class="card-small-title">校内风采</div>
-              <div class="card-title">校内风采</div>
-              <div class="card-content">校内风采：“风起云涌，雨打风吹，一切皆有可能。”</div>
-              <div class="card-img">
-                <img src="./img/04.gif" alt="">
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 </section>
 <section class="notification-section">
     <div class="page" id="page3">
@@ -383,23 +520,23 @@
                     <article class="notification-card" data-category="academic">
                         <a href="#">
                             <div class="notification-badge">置顶</div>
-                        <div class="notification-date">
-                            <img src="./images/librarybooks.png" alt="">
-                        </div>
-                        <div class="notification-content">
-                            <span class="notification-tag academic">教务通知</span>
-                            <span class="date-month">2024-10-25</span>
-                            <h3 class="notification-title">关于2024年秋季学期期末考试安排的通知</h3>
-                            <p class="notification-text">
-                                为确保期末考试工作顺利进行，现将2024年秋季学期期末考试相关事项通知如下...</p>
-                        </div>
+                            <div class="notification-date">
+                                <img alt="" src="./images/librarybooks.png">
+                            </div>
+                            <div class="notification-content">
+                                <span class="notification-tag academic">教务通知</span>
+                                <span class="date-month">2024-10-25</span>
+                                <h3 class="notification-title">关于2024年秋季学期期末考试安排的通知</h3>
+                                <p class="notification-text">
+                                    为确保期末考试工作顺利进行，现将2024年秋季学期期末考试相关事项通知如下...</p>
+                            </div>
                         </a>
-                        
+
                     </article>
                     <article class="notification-card" data-category="department">
                         <a href="#">
                             <div class="notification-date">
-                                <img src="./images/librarybooks.png" alt="">
+                                <img alt="" src="./images/librarybooks.png">
                             </div>
                             <div class="notification-content">
                                 <span class="notification-tag department">系部通知</span>
@@ -413,7 +550,7 @@
                     <article class="notification-card" data-category="department">
                         <a href="#">
                             <div class="notification-date">
-                                <img src="./images/librarybooks.png" alt="">
+                                <img alt="" src="./images/librarybooks.png">
                             </div>
                             <div class="notification-content">
                                 <span class="notification-tag department">系部通知</span>
@@ -427,7 +564,7 @@
                     <article class="notification-card" data-category="department">
                         <a href="#">
                             <div class="notification-date">
-                                <img src="./images/librarybooks.png" alt="">
+                                <img alt="" src="./images/librarybooks.png">
                             </div>
                             <div class="notification-content">
                                 <span class="notification-tag department">系部通知</span>
@@ -439,37 +576,37 @@
                         </a>
                     </article>
                     <article class="notification-card" data-category="academic">
-                            <a href="#">
-                                <div class="notification-date">
-                                    <img src="./images/librarybooks.png" alt="">
-                                </div>
-                                <div class="notification-content">
-                                    <span class="notification-tag academic">教务通知</span>
-                                    <span class="date-month">2024-10-25</span>
-                                    <h3 class="notification-title">关于2024年秋季学期期末考试安排的通知</h3>
-                                    <p class="notification-text">
-                                        为确保期末考试工作顺利进行，现将2024年秋季学期期末考试相关事项通知如下...</p>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="notification-card" data-category="academic">
-                            <a href="#">
-                                <div class="notification-date">
-                                    <img src="./images/librarybooks.png" alt="">
-                                </div>
-                                <div class="notification-content">
-                                    <span class="notification-tag academic">教务通知</span>
-                                    <span class="date-month">2024-10-25</span>
-                                    <h3 class="notification-title">关于2024年秋季学期期末考试安排的通知</h3>
-                                    <p class="notification-text">
-                                        为确保期末考试工作顺利进行，现将2024年秋季学期期末考试相关事项通知如下...</p>
-                                </div>
-                            </a>
-                        </article>
+                        <a href="#">
+                            <div class="notification-date">
+                                <img alt="" src="./images/librarybooks.png">
+                            </div>
+                            <div class="notification-content">
+                                <span class="notification-tag academic">教务通知</span>
+                                <span class="date-month">2024-10-25</span>
+                                <h3 class="notification-title">关于2024年秋季学期期末考试安排的通知</h3>
+                                <p class="notification-text">
+                                    为确保期末考试工作顺利进行，现将2024年秋季学期期末考试相关事项通知如下...</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="notification-card" data-category="academic">
+                        <a href="#">
+                            <div class="notification-date">
+                                <img alt="" src="./images/librarybooks.png">
+                            </div>
+                            <div class="notification-content">
+                                <span class="notification-tag academic">教务通知</span>
+                                <span class="date-month">2024-10-25</span>
+                                <h3 class="notification-title">关于2024年秋季学期期末考试安排的通知</h3>
+                                <p class="notification-text">
+                                    为确保期末考试工作顺利进行，现将2024年秋季学期期末考试相关事项通知如下...</p>
+                            </div>
+                        </a>
+                    </article>
                     <article class="notification-card" data-category="student">
                         <a href="#">
                             <div class="notification-date">
-                                <img src="./images/librarybooks.png" alt="">
+                                <img alt="" src="./images/librarybooks.png">
                             </div>
                             <div class="notification-content">
                                 <span class="notification-tag student">学工通知</span>
@@ -482,7 +619,7 @@
                     <article class="notification-card" data-category="student">
                         <a href="#">
                             <div class="notification-date">
-                                <img src="./images/librarybooks.png" alt="">
+                                <img alt="" src="./images/librarybooks.png">
                             </div>
                             <div class="notification-content">
                                 <span class="notification-tag student">学工通知</span>
@@ -495,7 +632,7 @@
                     <article class="notification-card" data-category="student">
                         <a href="#">
                             <div class="notification-date">
-                                <img src="./images/librarybooks.png" alt="">
+                                <img alt="" src="./images/librarybooks.png">
                             </div>
                             <div class="notification-content">
                                 <span class="notification-tag student">学工通知</span>
@@ -514,6 +651,7 @@
         </div>
     </div>
 </section>
+
 <section class="section faculty-section">
     <div class="page" id="page4">
         <div class="container">
@@ -553,15 +691,15 @@
 </section>
 <section class="section links-section">
     <h1 class="kuaisudaohang-title">-----快速导航-----</h1>
- <div class="kuaisudaohang">
-  <div class="button-container">
-    <a href="./denglu.html" class="button">教务管理</a>
-    <a href="./index.html" class="button">返回首页</a>
-    <a href="http://www.llsz.edu.cn/" class="button">学校官网</a>
-    <a href="#" class="button">学校官网</a>
-    <a href="#" class="button">学校官网</a>
-  </div>
- </div>
+    <div class="kuaisudaohang">
+        <div class="button-container">
+            <a class="button" href="./denglu.html">教务管理</a>
+            <a class="button" href="./index.html">返回首页</a>
+            <a class="button" href="http://www.llsz.edu.cn/">学校官网</a>
+            <a class="button" href="#">学校官网</a>
+            <a class="button" href="#">学校官网</a>
+        </div>
+    </div>
 </section>
 <footer class="footer-section">
     <div class="page" id="page5">
@@ -571,16 +709,16 @@
                     <div class="contact-info">
                         <h3>联系我们</h3>
                         <p>
-                            <img src="./images/address.svg" alt="校址" height="18px" width="18px">
+                            <img alt="校址" height="18px" src="./images/address.svg" width="18px">
                             山西省吕梁市方山县大武镇保安村
                         </p>
                         <p>
-                            <img src="./images/phone.svg" alt="电话" height="18px" width="18px">
+                            <img alt="电话" height="18px" src="./images/phone.svg" width="18px">
                             <a href="tel:0358-2286036">0358-2286036</a> /
                             <a href="tel:0358-2286039">2286039</a>
                         </p>
                         <p>
-                            <img src="./images/email.svg" alt="邮箱" height="18px" width="18px">
+                            <img alt="邮箱" height="18px" src="./images/email.svg" width="18px">
                             <a href="mailto:xxxxx@llsz.edu.cn">xxxxx@llsz.edu.cn</a>
                         </p>
                     </div>
