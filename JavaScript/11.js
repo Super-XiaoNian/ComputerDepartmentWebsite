@@ -65,3 +65,43 @@ function startSlide() {
   }, 3000); // 每隔 3 秒自动切换幻灯片 
 }
 
+
+/*  // 图片延迟加载
+    const images = document.querySelectorAll('.gallery-img[loading="lazy"]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                observer.unobserve(img);
+            }
+        });
+    });
+
+    images.forEach(img => imageObserver.observe(img));
+
+    // 分类筛选功能
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const category = btn.dataset.category;
+
+            // 更新按钮状态
+            categoryBtns.forEach(b => b.classList.remove('category-active'));
+            btn.classList.add('category-active');
+
+            // 更新标题
+            document.querySelector('.content-title').textContent = btn.textContent;
+
+            // 筛选图片
+            galleryItems.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });*/

@@ -39,7 +39,7 @@ body {
 }
 /*统一版心宽度*/
 .container {
-    max-width: 1300px;
+    max-width: 1500px;
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
@@ -1278,20 +1278,6 @@ body {
     }
 }
 
-/*
-@keyframes pulse1 {
-    0% {
-        box-shadow: 0 0 0 0 rgba(74,92,255,0.4);
-    }
-    70% {
-        box-shadow: 0 0 0 10px rgba(74,92,255,0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(74,92,255,0);
-    }
-}
-*/
-
 .faculty-team-name {
     animation: fadeInUp 0.6s ease forwards;
 }
@@ -1765,7 +1751,8 @@ body {
 
 .campus-section {
     position: relative;
-    grid-template-columns: repeat(3, 1fr);  /* 固定3列 */    padding: 60px 0;
+    grid-template-columns: repeat(3, 1fr);  /* 固定3列 */
+    padding: 60px 20px;
     min-height: 20vh;
     z-index: 3;
 }
@@ -1780,7 +1767,7 @@ body {
 
 /* 左侧导航样式 */
 .category-nav {
-    background: #1A3A5D;  /* 使用主题色 */
+    background: #1A3A5D;
     height: 100%;
     padding: 30px 0;
 }
@@ -1854,6 +1841,14 @@ body {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:nth-child(n+4) {
+    display: none;
+}
+
+.gallery-grid.show-all .gallery-item {
+    display: block;
 }
 
 .gallery-item:hover {
@@ -1943,24 +1938,9 @@ body {
 }
 
 /* 加载更多按钮 */
-.load-more-wrapper {
+.campus-footer {
     text-align: center;
     margin-top: 30px;
-}
-
-.load-more-btn {
-    background: #1A3A5D;
-    color: white;
-    padding: 12px 30px;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.load-more-btn:hover {
-    background: #2c5a8f;
-    transform: translateY(-2px);
 }
 
 /* 图片预览模态框 */

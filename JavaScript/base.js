@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     InitObserverNotification();
     initFaculty();
     BackTop();
+    initCampusGallery();
 
 });
 //警告
@@ -798,43 +799,52 @@ function BackTop() {
 }
 
 function initCampusGallery() {
-    // 图片延迟加载
-    const images = document.querySelectorAll('.gallery-img[loading="lazy"]');
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                observer.unobserve(img);
-            }
-        });
-    });
-
-    images.forEach(img => imageObserver.observe(img));
-
-    // 分类筛选功能
+    const galleryGrid = document.querySelector('.gallery-grid');
+    const loadMoreBtn = document.querySelector('.campus-footer .load-more');
     const categoryBtns = document.querySelectorAll('.category-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
 
-    categoryBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const category = btn.dataset.category;
+    initFilterAndLoadMore('all');
 
-            // 更新按钮状态
-            categoryBtns.forEach(b => b.classList.remove('category-active'));
-            btn.classList.add('category-active');
+    function initFilterAndLoadMore(category){
+        const allItems = galleryGrid.querySelectorAll('.gallery-item');
+        console.log(galleryGrid);
+        console.log(allItems);
 
-            // 更新标题
-            document.querySelector('.content-title').textContent = btn.textContent;
+        //根据图片的张数是否超过六张来决定是否显示”更多按钮“
+        if(allItems.length <= 4 && loadMoreBtn) {
+            loadMoreBtn.style.display = 'none';
+        }else {
+            loadMoreBtn.style.display = 'block';
+        }
 
-            // 筛选图片
-            galleryItems.forEach(item => {
-                if (category === 'all' || item.dataset.category === category) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
-    });
+        //大前提(
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click',function (e) {
+                galleryGrid.classList.add('show-all');
+                this.style.display = 'none';
+
+                const hiddenItems = galleryGrid.querySelectorAll('.gallery-item:nth-child(n+4)');
+                hiddenItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.style.display = 'block';
+                    }, index * 100);
+                })
+            })
+        }
+    }
+
+    //分类按钮点击事件
+        if(categoryBtns){
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click',function () {
+                    categoryBtns.forEach(b => {
+                        b.classList.remove('category-active');
+                        btn.classList.add('category-active');
+
+                        const category = btn.dataset.category;
+                        initFilterAndLoadMore(category);
+                    })
+                })
+            })
+        }
 }
