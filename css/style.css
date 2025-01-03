@@ -1,0 +1,132 @@
+a {
+    text-decoration: none;
+    color:black
+}
+a:hover {
+    text-decoration: none;
+}
+.colo-md-4{
+    background-color: red;
+    height: 100px;
+    
+}
+.colo-md-8{
+    background-color: red;
+}
+.container{
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.row{
+    margin-bottom:20px ;
+    padding-top: 20px;
+}
+/* ------------------------------------------------侧边导航---------------------------------------------- */
+.card{
+    height:100%;
+}
+.btn-primary{
+    display: block;
+    color:black;
+    /* background: linear-gradient(to right, blue, pink); */
+    padding:10px;
+    font-size: 16px;
+    border-bottom: 1px solid #808080;
+    opacity: 0.8; 
+    transition: all 0.4s ease;
+    text-align: center;
+}
+.btn-primary:hover{
+    color:#004b9b;
+    background-color: rgb(156, 150, 150);
+}
+.btn-primary1{
+    display: block;
+    color:white;
+    font-size: 20px;
+    /* background: linear-gradient(to right, blue, pink); */
+    padding:10px;
+    background-color: #004b9b;
+    text-align: center;
+}
+#btn2{
+    background-color: #808080;
+    color:rgb(255, 255, 255)
+}
+/* ----------------------------右侧内容---------------------------- */
+.col-md-9{
+    margin-top: 10;
+    background-color: white;
+}
+.col-md-14{
+    margin-top: 10;
+    background-color: white;
+}
+
+.card2-title{
+    border-bottom:1px solid #808080;
+    padding-top: 30px;
+}
+.card2-title a:hover{
+    color: blue;
+}
+.card2{
+    padding-bottom: 40px;
+}
+.card2 p{
+    margin-top: 15px;
+}
+.col-md-9 h2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.col-md-14 h2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.col-md-9 p{
+    padding-left: 28px;
+    padding-right: 28px;
+    text-indent: 3em;
+    line-height: 180%;
+    
+}
+.col-md-14 p{
+    padding-left: 28px;
+    padding-right: 28px;
+    text-indent: 3em;
+    line-height: 180%;
+    
+}
+.card2 img{
+    padding-top: 10px;
+    padding-left: 28px;
+    padding-right: 28px;
+    max-width: 100%;
+    height:auto;
+}
+.card2 h2{
+    text-align: center;
+}
+.card2 h3{
+    padding-left: 28px;
+    padding-right: 28px;
+    text-indent: 3em;
+    line-height: 180%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.card2 li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border-bottom: 2px solid #808080;
+}
+.card2 li:hover{
+    color:#808080;
+}
+.card2 li span{
+    margin:0 auto ;
+}

@@ -17,17 +17,19 @@
 
 a {
     text-decoration: none;
-    color:white;
-    }
+    color: white;
+}
 
 a:hover {
-        text-decoration: none;
-    }
+    text-decoration: none;
+}
 
 /*body所有元素的基础设置*/
 body {
     color: black;
-    overflow-x: hidden;  /*若文字超过浏览器当前宽度，取消滚动*/
+    overflow-x: hidden;
+    /*若文字超过浏览器当前宽度，取消滚动*/
+    background: linear-gradient(135deg, #f8f9ff 0%, #f1f4ff 100%);
 }
 
 /*设置服务器字体(实际上是引入图标)*/
@@ -37,12 +39,36 @@ body {
     font-weight: normal;
     font-style: normal;
 }
-/*统一版心宽度*/
-.container {
-    max-width: 1500px;
+
+/*统一版心宽度（默认台式）*/
+.container{
+    max-width: 1300px;
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
+}
+/*平板分辨率*/
+@media only screen and (min-width: 601px) and (max-width: 1200px){
+    .container {
+        max-width: 1300px;
+    }
+}
+
+/*笔记本*/
+@media only screen and (min-width: 1201px) and (max-width: 1500px) {
+    .container{
+        max-width: 1300px;
+    }
+
+}
+
+/*移动设备*/
+@media only screen and (max-width: 600px){
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
 }
 
 /*header盒子，里面放小信息，导航栏以及子菜单，还有轮播图*/
@@ -50,13 +76,13 @@ body {
     position: relative;
     width: 100%;
     z-index: 2;
-    background:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%)
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%)
 }
 
 .header-top {
     height: 40px;
     line-height: 40px;
-    background-color: #1A3A5D;
+    background-color: #004b9b;
 }
 
 /*小信息的全部内容*/
@@ -97,7 +123,8 @@ body {
 
 .header-content-right ul li a:hover {
     color: #FFFFFF;
-    cursor: pointer;  /*鼠标悬停到某一元素时，会把光标变成点击那个手掌*/
+    cursor: pointer;
+    /*鼠标悬停到某一元素时，会把光标变成点击那个手掌*/
 }
 
 .link1 {
@@ -130,7 +157,12 @@ body {
     position: relative;
 }
 
-.link1, .link2, .link3, .link4, .link6, .link7 {
+.link1,
+.link2,
+.link3,
+.link4,
+.link6,
+.link7 {
     background-size: 1.2em 1.2em;
 }
 
@@ -141,21 +173,26 @@ body {
     position: absolute;
     right: 0;
 }
+
 /*搜索栏的盒子*/
 .search-box {
-    right: 0;  /*决定了往哪个方向对齐然后展开*/
+    right: 0;
+    /*决定了往哪个方向对齐然后展开*/
     width: 0;
     height: 30px;
     padding: 0 20px;
     outline: none;
     border: 2px solid #ccc;
     border-radius: 15px;
-    opacity: 0;  /*元素显示*/
-    transition: width 0.4s ease-in-out, opacity 0.4s ease-in-out;  /*展开动画*/
+    opacity: 0;
+    /*元素显示*/
+    transition: width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    /*展开动画*/
 }
 
 .link7:hover .search-box {
-    width: 200px;  /*展开的高度*/
+    width: 200px;
+    /*展开的高度*/
     opacity: 1;
 }
 
@@ -164,12 +201,14 @@ body {
 }
 
 /*logo图标，导航栏，以及导航栏所对应的文字*/
-.header-bottom{
+.header-bottom {
     position: relative;
     height: 80px;
     display: flex;
-    align-items: center;  /*flex布局下的当前元素的对齐方式*/
-    justify-content: space-between;  /*两端对齐*/
+    align-items: center;
+    /*flex布局下的当前元素的对齐方式*/
+    justify-content: space-between;
+    /*两端对齐*/
 }
 
 /*logo图标*/
@@ -182,24 +221,24 @@ body {
 }
 
 /*导航栏的基础设置*/
-.nav > ul {
+.nav>ul {
     display: flex;
     align-items: center;
 }
 
-.nav > ul > li{
+.nav>ul>li {
     position: relative;
     list-style: none;
     padding: 10px 10px;
     font-size: 18px;
 }
 
-.nav > ul > li:hover{
-    color:red;
+.nav>ul>li:hover {
+    color: red;
 }
 
 /*导航栏文字的基础设置*/
-.mean em{
+.mean em {
     font-style: normal;
     font-weight: bold;
     color: #ffffff;
@@ -207,9 +246,10 @@ body {
 }
 
 /*设置导航栏每个菜单右侧文字的下箭头*/
-.mean em:after{
+.mean em:after {
     font-family: "icon", serif;
-    content: "\eaed"; /*引用服务器字体里面的某个符号*/
+    content: "\eaed";
+    /*引用服务器字体里面的某个符号*/
     font-size: 10px;
     margin-left: 5px;
     color: #FFFFFF;
@@ -228,53 +268,58 @@ body {
 /*子菜单的基础设置*/
 .dropdown {
     position: absolute;
-    top: 100%; 
-    left: 50%; 
+    top: 100%;
+    left: 50%;
     opacity: 0;
-    pointer-events: none; 
+    pointer-events: none;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    visibility: hidden; 
-    transform: translateX(-50%) scaleY(0);  /*scaleY是放大或者缩小*/
-    transform-origin: top; /*从哪个方向开始动画效果*/
+    visibility: hidden;
+    transform: translateX(-50%) scaleY(0);
+    /*scaleY是放大或者缩小*/
+    transform-origin: top;
+    /*从哪个方向开始动画效果*/
     transition: opacity 0.6s ease, visibility 0.6s ease, transform 0.6s ease;
     min-width: 200px;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.6); 
+    background-color: rgba(255, 255, 255, 0.6);
 
 }
 
 .nav ul li:hover .dropdown {
     opacity: 1;
-    pointer-events: auto; 
+    pointer-events: auto;
     visibility: visible;
-    transform: translateX(-50%) scaleY(1); 
+    transform: translateX(-50%) scaleY(1);
 }
 
-.dropdown ul{
+.dropdown ul {
     list-style-type: none;
     text-align: center;
 }
 
-.dropdown ul li{
+.dropdown ul li {
     padding: 10px 10px;
-    margin:10px 10px;
+    margin: 10px 10px;
 }
 
-.dropdown ul li:hover{
+.dropdown ul li:hover {
     background: linear-gradient(to right, #D8F3FF, #FFFFFF);
-    color: #D8E8FF; 
+    color: #D8E8FF;
 }
 
-.dropdown ul li a{
+.dropdown ul li a {
     font-size: 16px;
     text-decoration: none;
     color: black;
 }
+
 /*轮播图部分（难点）*/
 .header-slideshow .slide {
-    min-width: 95vh;    /*设置宽度为屏幕的95%。主要是控制元素的宽度，不超过屏幕看不到的部分*/
-    height: 95vh;  /*设置轮播图容器的高度为屏幕的90%*/
-    background-size: cover; 
+    min-width: 95vh;
+    /*设置宽度为屏幕的95%。主要是控制元素的宽度，不超过屏幕看不到的部分*/
+    height: 95vh;
+    /*设置轮播图容器的高度为屏幕的90%*/
+    background-size: cover;
     background-position: center;
     transition: opacity 1s ease-in-out;
     position: absolute;
@@ -284,8 +329,9 @@ body {
 
 .header-slideshow .slideImg {
     position: relative;
-    top:-80px;
-    width: 400%;   /*一张图片100%，三张图片300%*/
+    top: -80px;
+    width: 400%;
+    /*一张图片100%，三张图片300%*/
     height: 100%;
     display: flex;
     transition: transform 1s ease-in-out;
@@ -294,69 +340,80 @@ body {
 .header-slideshow .slideImg li a img {
     width: 100%;
     height: 97vh;
-    object-fit: cover;   /*图片的尺寸大小为父元素的最佳尺寸*/
+    object-fit: cover;
+    /*图片的尺寸大小为父元素的最佳尺寸*/
     position: relative;
     overflow: hidden;
 }
 
 .header-slideshow .slideImg li {
-    width: 25%;  /*每个图片的宽邸为33.33%*/
+    width: 25%;
+    /*每个图片的宽邸为33.33%*/
 }
 
 .video-slide {
-    width: 25%;  /* 与其他轮播项保持一致 */
-    height: 95vh;     /* 与其他轮播项保持一致 */
+    width: 25%;
+    /* 与其他轮播项保持一致 */
+    height: 95vh;
+    /* 与其他轮播项保持一致 */
     overflow: hidden;
 }
 
 .video-slide video {
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* 确保视频填充整个容器 */
+    object-fit: cover;
 }
 
 /*轮播图左右侧切换按钮*/
 .slider-buttons {
+    opacity: 0;
     position: absolute;
-    left: -1%;
-    top: 54%;
+    top: 40px;
+    left: 0;
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
-    z-index: 2;  /*元素显示权重*/
+    z-index: 1;
+    transition: opacity 0.3s ease;
 }
 
 .slider-buttons button {
-    background-color: rgba(0, 0, 0, 0.1); 
-    color: white; 
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
     font-size: 24px;
-    width: 50px;  
-    height: 95vh;   /*与当前的轮播图高度保持一致*/
+    width: 50px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); 
-    transition: background-color 0.3s ease; 
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
 }
 
 .slider-buttons .prev {
-    left: 10px;
+    left: 0;
 }
 
 .slider-buttons .next {
-    right: -14px;
+    right: 0;
 }
 
 .slider-buttons button:hover {
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 60px;
 }
 
-/*轮播图的指示器*/
+.slideshow:hover .slider-buttons {
+    opacity: 1;
+}
+    /*轮播图的指示器*/
 .slider-indicators {
     display: flex;
     position: absolute;
@@ -386,7 +443,7 @@ body {
     background-color: #ece9e9;
     border-radius: 5px;
     transition: all 0.3s ease;
-    animation: pulse 1s infinite;  
+    animation: pulse 1s infinite;
 }
 
 .indicator:hover {
@@ -400,9 +457,11 @@ body {
 
 /*新闻公告容器*/
 .section {
-    position: relative;  /*设置当前定位，为子元素的定位功能做参考*/
+    position: relative;
+    /*设置当前定位，为子元素的定位功能做参考*/
     z-index: 2;
 }
+
 /*新闻动态的基础设置*/
 .news-section {
     position: relative;
@@ -411,11 +470,12 @@ body {
     background: linear-gradient(135deg, #f8f9ff 0%, #f1f4ff 100%);
     z-index: 2;
 }
+
 /*新闻公告容器（主体）*/
 .news-box {
     background: #fff;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     padding: 30px;
     position: relative;
 }
@@ -465,8 +525,9 @@ body {
     transition: all 0.3s ease;
 }
 
-.category:hover, .category.active {
-    background: linear-gradient(45deg, rgba(74,92,255,0.1), rgba(0,210,255,0.1));
+.category:hover,
+.category.active {
+    background: linear-gradient(45deg, rgba(74, 92, 255, 0.1), rgba(0, 210, 255, 0.1));
     color: #4a5cff;
 }
 
@@ -500,18 +561,19 @@ body {
     grid-template-columns: 1.5fr 1fr;
     gap: 30px;
     margin-top: 20px;
-    height:400px;
+    height: 400px;
 }
 
 /*新闻左侧*/
 .news-left .news-card {
     opacity: 0;
     transform: translateX(-100%);
-    transition: none;  /* 初始没有过渡效果 */
+    transition: none;
+    /* 初始没有过渡效果 */
     border-radius: 15px;
     overflow: hidden;
     background: #fff;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     will-change: transform, opacity;
 }
 
@@ -531,6 +593,7 @@ body {
 .news-left .news-card:hover img {
     transform: scale(1.05);
 }
+
 /*图片容器基础设置*/
 .news-image-overlay {
     position: absolute;
@@ -538,7 +601,7 @@ body {
     left: 0;
     width: 100%;
     padding: 30px;
-    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
     color: #fff;
 }
 
@@ -572,16 +635,17 @@ body {
 .news-right .news-card {
     opacity: 0;
     transform: translateX(100%);
-    transition: none;  /* 初始没有过渡效果 */
+    transition: none;
+    /* 初始没有过渡效果 */
     background: #fff;
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .news-right .news-card:hover {
     transform: translateX(10px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -606,23 +670,27 @@ body {
 
 /*新闻类型颜色*/
 [data-category="notice"] .news-tag {
-    background: rgba(74,92,255,0.1);
-    color: #4a5cff;  /* 系部通知用蓝色 */
+    background: rgba(74, 92, 255, 0.1);
+    color: #4a5cff;
+    /* 系部通知用蓝色 */
 }
 
 [data-category="teaching"] .news-tag {
-    background: rgba(76,175,80,0.1);
-    color: #4caf50;  /* 教学活动用绿色 */
+    background: rgba(76, 175, 80, 0.1);
+    color: #4caf50;
+    /* 教学活动用绿色 */
 }
 
 [data-category="competition"] .news-tag {
-    background: rgba(255,152,0,0.1);
-    color: #ff9800;  /* 竞赛获奖用橙色 */
+    background: rgba(255, 152, 0, 0.1);
+    color: #ff9800;
+    /* 竞赛获奖用橙色 */
 }
 
 [data-category="internship"] .news-tag {
-    background: rgba(233,30,99,0.1);
-    color: #e91e63;  /* 企业实习用粉红色 */
+    background: rgba(233, 30, 99, 0.1);
+    color: #e91e63;
+    /* 企业实习用粉红色 */
 }
 
 @keyframes slideInLeft {
@@ -630,6 +698,7 @@ body {
         opacity: 0;
         transform: translateX(-100%);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -641,6 +710,7 @@ body {
         opacity: 0;
         transform: translateX(100%);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -652,6 +722,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -663,6 +734,7 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+
     to {
         opacity: 0;
         transform: translateY(-20px);
@@ -674,10 +746,12 @@ body {
         transform: scale(1);
         opacity: 1;
     }
+
     50% {
         transform: scale(1.2);
         opacity: 0.7;
     }
+
     100% {
         transform: scale(1);
         opacity: 1;
@@ -722,7 +796,7 @@ body {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(74,92,255,0.1) 0%, rgba(74,92,255,0) 70%);
+    background: radial-gradient(circle, rgba(74, 92, 255, 0.1) 0%, rgba(74, 92, 255, 0) 70%);
     z-index: 0;
 }
 
@@ -739,7 +813,8 @@ body {
 .news-card {
     opacity: 0;
     transform: translateX(-100%);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;}
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
 
 .read-more {
     display: inline-flex;
@@ -783,7 +858,7 @@ body {
 }
 
 /*通知公告容器*/
-.notification-section{
+.notification-section {
     position: relative;
     z-index: 3;
     min-height: 20vh;
@@ -825,7 +900,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 15px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .filter-btn:hover {
@@ -844,7 +919,7 @@ body {
     z-index: 1;
     background: #fff;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     padding: 30px;
 }
 
@@ -861,7 +936,7 @@ body {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(74,92,255,0.1) 0%, rgba(74,92,255,0) 70%);
+    background: radial-gradient(circle, rgba(74, 92, 255, 0.1) 0%, rgba(74, 92, 255, 0) 70%);
     z-index: 0;
 }
 
@@ -876,7 +951,7 @@ body {
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     position: relative;
     display: flex;
@@ -887,11 +962,13 @@ body {
 
 .notification-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
-.notification-card:hover .notification-title{
+
+.notification-card:hover .notification-title {
     color: #0a7188;
 }
+
 .notification-badge {
     position: absolute;
     top: 15px;
@@ -910,10 +987,18 @@ body {
     text-align: center;
     border-bottom: 1px solid #eee;
 }
-.notification-date img{
-    width:310px;
+
+.notification-date img {
+    width: 100%;
     height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
+
+.notification-date img:hover {
+    transform: scale(1.05);
+}
+
 
 .date-day {
     display: block;
@@ -931,10 +1016,12 @@ body {
     padding: 20px;
     flex: 1;
 }
-.notification-content img{
-    width:100%;
-    height:180px;
+
+.notification-content img {
+    width: 100%;
+    height: 180px;
 }
+
 .notification-tag {
     display: inline-block;
     padding: 4px 12px;
@@ -968,6 +1055,7 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
 .notification-text {
     color: #666;
     font-size: 14px;
@@ -1025,7 +1113,7 @@ body {
     background: #fff;
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
     position: relative;
     overflow: hidden;
@@ -1043,7 +1131,7 @@ body {
 
 .faculty-content:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .faculty-team-txt {
@@ -1075,7 +1163,7 @@ body {
     font-size: 18px;
     margin-bottom: 25px;
     padding: 8px 15px;
-    background: rgba(74,144,226,0.1);
+    background: rgba(74, 144, 226, 0.1);
     border-radius: 30px;
     display: inline-block;
 }
@@ -1159,7 +1247,7 @@ body {
     border-radius: 20px;
     overflow: hidden;
     border: 5px solid #fff;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     transition: all 0.5s ease;
     transform-style: preserve-3d;
     position: relative;
@@ -1172,7 +1260,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(74,92,255,0.3), rgba(0,210,255,0.3));
+    background: linear-gradient(45deg, rgba(74, 92, 255, 0.3), rgba(0, 210, 255, 0.3));
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1;
@@ -1201,7 +1289,7 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: rgba(74,92,255,0.9);
+    background: rgba(74, 92, 255, 0.9);
     color: white;
     border: none;
     cursor: pointer;
@@ -1211,13 +1299,13 @@ body {
     transition: all 0.3s ease;
     font-size: 20px;
     backdrop-filter: blur(5px);
-    box-shadow: 0 5px 15px rgba(74,92,255,0.3);
+    box-shadow: 0 5px 15px rgba(74, 92, 255, 0.3);
 }
 
 .nav-btn:hover {
     background: #4a5cff;
     transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(74,92,255,0.4);
+    box-shadow: 0 8px 20px rgba(74, 92, 255, 0.4);
 }
 
 .pagination {
@@ -1230,20 +1318,20 @@ body {
 .page-dot {
     width: 35px;
     height: 4px;
-    background: rgba(74,92,255,0.2);
+    background: rgba(74, 92, 255, 0.2);
     border-radius: 2px;
     cursor: pointer;
     transition: all 0.4s ease;
 }
 
 .page-dot:hover {
-    background: rgba(74,92,255,0.5);
+    background: rgba(74, 92, 255, 0.5);
 }
 
 .page-dot.active {
     width: 55px;
     background: #4a5cff;
-    box-shadow: 0 2px 8px rgba(74,92,255,0.4);
+    box-shadow: 0 2px 8px rgba(74, 92, 255, 0.4);
 }
 
 .faculty-section::before,
@@ -1253,7 +1341,7 @@ body {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(74,92,255,0.1) 0%, rgba(74,92,255,0) 70%);
+    background: radial-gradient(circle, rgba(74, 92, 255, 0.1) 0%, rgba(74, 92, 255, 0) 70%);
     z-index: 0;
 }
 
@@ -1272,6 +1360,7 @@ body {
         opacity: 0;
         transform: translateX(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -1320,7 +1409,7 @@ body {
 
 .faculty-content:hover .faculty-team-title {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(74,92,255,0.2);
+    box-shadow: 0 5px 15px rgba(74, 92, 255, 0.2);
 }
 
 .faculty-content:hover .faculty-image-wrapper {
@@ -1392,7 +1481,7 @@ body {
     background: #fff;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .faculty-team-txt {
@@ -1464,7 +1553,7 @@ body {
     border-radius: 50%;
     overflow: hidden;
     border: 5px solid #fff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
@@ -1535,7 +1624,7 @@ body {
 }
 
 .footer-section {
-    background: #1A3A5D;
+    background: #004b9b;
     color: #fff;
     padding: 40px 0 20px;
     margin-top: 0px;
@@ -1576,7 +1665,7 @@ body {
 }
 
 .contact-info a {
-    color:#e0e0e0;
+    color: #e0e0e0;
     text-decoration: none;
 }
 
@@ -1627,26 +1716,58 @@ body {
     position: fixed;
     right: 30px;
     bottom: 30px;
-    width: 40px;
-    height: 40px;
-    background: #1A3A5D;
+    width: 44px;
+    height: 44px;
+    background: #004b9b;
     border-radius: 50%;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+}
+
+.back-to-top-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top .arrow {
+    font-size: 20px;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.back-to-top .text {
+    font-size: 10px;
+    margin-top: 2px;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: all 0.3s ease;
 }
 
 .back-to-top:hover {
     background: #4A90E2;
     transform: translateY(-3px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top:hover .arrow {
+    transform: translateY(-2px);
+}
+
+.back-to-top:hover .text {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .back-to-top.show {
@@ -1660,7 +1781,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: #1A3A5D;
+    background: #004b9b;
     transform: translateY(-100%);
     transition: all 0.3s ease;
     z-index: 1000;
@@ -1675,7 +1796,7 @@ body {
 .fixed-nav .header-bottom {
     height: 60px;
     padding: 0 20px;
-    background: #1A3A5D;
+    background: #004b9b;
 }
 
 .fixed-nav .logo {
@@ -1684,7 +1805,7 @@ body {
     background-size: 450px auto;
 }
 
-.fixed-nav .nav > ul > li {
+.fixed-nav .nav>ul>li {
     position: relative;
 }
 
@@ -1738,6 +1859,7 @@ body {
         transform: translateY(-100%);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -1751,7 +1873,8 @@ body {
 
 .campus-section {
     position: relative;
-    grid-template-columns: repeat(3, 1fr);  /* 固定3列 */
+    grid-template-columns: repeat(3, 1fr);
+    /* 固定3列 */
     padding: 60px 20px;
     min-height: 20vh;
     z-index: 3;
@@ -1762,7 +1885,7 @@ body {
     margin: 0 auto;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* 左侧导航样式 */
@@ -1802,7 +1925,7 @@ body {
 .category-btn.category-active {
     transform: translateX(15px);
     opacity: 1;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 /* 右侧内容区样式 */
@@ -1839,7 +1962,7 @@ body {
     position: relative;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1853,7 +1976,7 @@ body {
 
 .gallery-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .gallery-item.featured {
@@ -1886,7 +2009,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
     padding: 20px;
     transform: translateY(100%);
     transition: transform 0.4s ease;
@@ -1923,7 +2046,7 @@ body {
 }
 
 .share-btn {
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     border: none;
     color: white;
     padding: 5px 12px;
@@ -1934,7 +2057,7 @@ body {
 }
 
 .share-btn:hover {
-    background: rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.3);
 }
 
 /* 加载更多按钮 */
@@ -1951,7 +2074,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0, 0, 0, 0.9);
     z-index: 1000;
     padding: 40px;
 }
@@ -1975,7 +2098,7 @@ body {
     position: absolute;
     top: 15px;
     right: 15px;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     width: 30px;

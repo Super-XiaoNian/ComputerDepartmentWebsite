@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     updateTime();
     initFixedNav();
     setInterval(updateTime, 1000);
@@ -9,10 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initFaculty();
     BackTop();
     initCampusGallery();
-
 });
 //警告
-function Tip(){
+function Tip() {
     window.alert('还没写完')
 }
 //更新时间
@@ -206,7 +205,7 @@ campusVideo.addEventListener('pause', () => {
     startAutoPlay();
 });
 function stopAutoPlay() {
-    if(autoPlayTimer) {
+    if (autoPlayTimer) {
         clearInterval(autoPlayTimer);
     }
 }
@@ -231,7 +230,7 @@ indicators.forEach((indicator, index) => {
 })
 
 prevBtn.addEventListener('click', () => {
-    if(!isTransitioning) {
+    if (!isTransitioning) {
         isTransitioning = true;
         stopAutoPlay();
         prevSlide();
@@ -243,7 +242,7 @@ prevBtn.addEventListener('click', () => {
 });
 
 nextBtn.addEventListener('click', () => {
-    if(!isTransitioning) {
+    if (!isTransitioning) {
         isTransitioning = true;
         stopAutoPlay();
         nextSlide();
@@ -355,7 +354,7 @@ function filterNews(category) {
 
 // 为分类添加点击事件
 categories.forEach(category => {
-    category.addEventListener('click', function() {
+    category.addEventListener('click', function () {
         categories.forEach(c => c.classList.remove('active'));
         this.classList.add('active');
         currentCategory = this.getAttribute('data-category');
@@ -365,7 +364,7 @@ categories.forEach(category => {
 
 // 新闻卡片悬停效果
 newsCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
+    card.addEventListener('mouseenter', function () {
         if (this.classList.contains('featured')) {
             const overlay = this.querySelector('.news-image-overlay');
             if (overlay) {
@@ -374,7 +373,7 @@ newsCards.forEach(card => {
         }
     });
 
-    card.addEventListener('mouseleave', function() {
+    card.addEventListener('mouseleave', function () {
         if (this.classList.contains('featured')) {
             const overlay = this.querySelector('.news-image-overlay');
             if (overlay) {
@@ -383,9 +382,17 @@ newsCards.forEach(card => {
         }
     });
 });
-
-
 // 通知公告观察
+const notification_box=document.querySelector('.notification-box');
+const containerWidth = notification_box.offsetWidth;
+
+if (containerWidth > 1400) {
+    maxVisibleCards = 8;  // 大屏显示8个
+} else if (containerWidth >= 768) {
+    maxVisibleCards = 6;  // 平板显示6个
+} else {
+    maxVisibleCards = 4;  // 手机显示4个
+}
 function InitObserverNotification() {
     // 创建一个标志，用于跟踪动画是否已经触发
     let animationTriggered = false;
@@ -393,15 +400,14 @@ function InitObserverNotification() {
     const ObserverNotificationOptions = {
         root: null,
         rootMargin: '0px',  // 可以调整这个值来改变触发的位置
-        threshold: 0.2      // 当元素有10%进入视口时触发
+        threshold: 0.2      // 当元素有20%进入视口时触发
     };
 
     const ObserverNotification = new IntersectionObserver((entries) => {
-        entries.forEach(entry  => {
+        entries.forEach(entry => {
             // 只在元素进入视口且动画尚未触发时执行
             if (entry.isIntersecting && !animationTriggered) {
                 animationTriggered = true; // 标记动画已触发
-
                 const notificationCards = document.querySelectorAll('.notification-card');
                 const activeFilterBtn = document.querySelector('.filter-tabs .filter-btn.active');
                 const filterValue = activeFilterBtn ? activeFilterBtn.getAttribute('data-filter') : 'all';
@@ -420,7 +426,7 @@ function InitObserverNotification() {
                         const category = card.getAttribute('data-category');
 
                         if (filterValue === 'all') {
-                            if (visibleCount < 6) {
+                            if (visibleCount < maxVisibleCards) {
                                 showCard(card, index);
                                 visibleCount++;
                             }
@@ -492,7 +498,7 @@ function initNotification() {
             notificationCards.forEach(card => {
                 const category = card.getAttribute('data-category');
                 if (filterValue === 'all') {
-                    if (visibleCount < 6) {
+                    if (visibleCount < maxVisibleCards) {
                         cardsToShow.push(card);
                         visibleCount++;
                     }
@@ -551,7 +557,7 @@ function initNotification() {
 
     // 绑定筛选按钮点击事件
     filterBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
+        btn.addEventListener('click', function () {
             if (isAnimating) return; // 如果正在动画中，忽略点击
 
             filterBtns.forEach(b => b.classList.remove('active'));
@@ -564,7 +570,7 @@ function initNotification() {
     // 绑定加载更多按钮事件
     const loadMoreBtn = document.querySelector('.load-more');
     if (loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', function() {
+        loadMoreBtn.addEventListener('click', function () {
             if (isAnimating) return;
 
             const hiddenCards = Array.from(notificationCards).filter(
@@ -805,21 +811,21 @@ function initCampusGallery() {
 
     initFilterAndLoadMore('all');
 
-    function initFilterAndLoadMore(category){
+    function initFilterAndLoadMore(category) {
         const allItems = galleryGrid.querySelectorAll('.gallery-item');
         console.log(galleryGrid);
         console.log(allItems);
 
         //根据图片的张数是否超过六张来决定是否显示”更多按钮“
-        if(allItems.length <= 4 && loadMoreBtn) {
+        if (allItems.length <= 4 && loadMoreBtn) {
             loadMoreBtn.style.display = 'none';
-        }else {
+        } else {
             loadMoreBtn.style.display = 'block';
         }
 
         //大前提(
         if (loadMoreBtn) {
-            loadMoreBtn.addEventListener('click',function (e) {
+            loadMoreBtn.addEventListener('click', function (e) {
                 galleryGrid.classList.add('show-all');
                 this.style.display = 'none';
 
@@ -834,17 +840,17 @@ function initCampusGallery() {
     }
 
     //分类按钮点击事件
-        if(categoryBtns){
-            categoryBtns.forEach(btn => {
-                btn.addEventListener('click',function () {
-                    categoryBtns.forEach(b => {
-                        b.classList.remove('category-active');
-                        btn.classList.add('category-active');
+    if (categoryBtns) {
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                categoryBtns.forEach(b => {
+                    b.classList.remove('category-active');
+                    btn.classList.add('category-active');
 
-                        const category = btn.dataset.category;
-                        initFilterAndLoadMore(category);
-                    })
+                    const category = btn.dataset.category;
+                    initFilterAndLoadMore(category);
                 })
             })
-        }
+        })
+    }
 }

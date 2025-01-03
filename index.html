@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="吕梁师范高等专科学校下的计算机系，为学生以及外界提供计算机专业的相关新闻和资源信息。"
-          name="description">
+    <meta content="吕梁师范高等专科学校下的计算机系，为学生以及外界提供计算机专业的相关新闻和资源信息。" name="description">
     <meta content="吕梁师范高等专科学校, 吕梁师专, 计算机系, 教育" name="keywords">
     <title>吕梁师专 - 计算机系</title>
     <link href="bootstrap/css/bootstrap-grid.min.css" rel="stylesheet">
@@ -16,747 +16,573 @@
     <script defer src="JavaScript/11.js"></script>
 </head>
 <div class="fixed-nav"></div>
+
 <body>
-<header>
-    <div class="page" id="page1">
-        <div class="header-box">
-            <div class="header-top">
-                <div class="header-content container">
-                    <span class="welcome-text">欢迎来到吕梁师专计算机系官网</span>
-                    <span class="time-text" id="current-time">当前时间为:</span>
-                    <div class="header-content-right">
+    <header>
+        <div class="page" id="page1">
+            <div class="header-box">
+                <div class="header-top">
+                    <div class="header-content container">
+                        <span class="welcome-text">欢迎来到吕梁师专计算机系官网</span>
+                        <span class="time-text" id="current-time">当前时间为:</span>
+                        <div class="header-content-right">
+                            <ul>
+                                <li class="link1"><a href="http://llsz.edu.cn/" target="_blank">学校官网</a></li>
+                                <li class="link2" onclick="Tip()"><a>图书馆</a></li>
+                                <li class="link3"><a href="http://llsz.edu.cn:8896/" target="_blank">师生系统</a></li>
+                                <li class="link4"><a href="http://llsz.edu.cn:8772/" target="_blank">旧版网站</a></li>
+                                <li class="link5"><span>|</span></li>
+                                <li class="link6"><a href="./English.html">English</a></li>
+                                <li class="link7">
+                                    <div class="search-icon">🔍</div>
+                                    <input class="search-box" placeholder="这是里吕专百家通" type="text" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-bottom container">
+                    <div class="logo"></div>
+                    <nav class="nav">
                         <ul>
-                            <li class="link1"><a href="http://llsz.edu.cn/" target="_blank">学校官网</a></li>
-                            <li class="link2" onclick="Tip()"><a>图书馆</a></li>
-                            <li class="link3"><a href="http://llsz.edu.cn:8896/" target="_blank">师生系统</a></li>
-                            <li class="link4"><a href="http://llsz.edu.cn:8772/" target="_blank">旧版网站</a></li>
-                            <li class="link5"><span>|</span></li>
-                            <li class="link6"><a>English</a></li>
-                            <li class="link7">
-                                <div class="search-icon">🔍</div>
-                                <input class="search-box" placeholder="这是里吕专百家通" type="text"/>
+                            <li><a class="mean" href="./index.html"><em class="home">首页</em></a></li>
+                            <li>
+                                <a class="mean"><em>系部概况</em></a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li><a href="./ejym/xbgk/xbjj.html">系部简介</a></li>
+                                        <li><a href="./ejym/xbgk/bxzz.html">办学宗旨</a></li>
+                                        <li><a href="./ejym/xbgk/fzlc.html">发展历程</a></li>
+                                        <li><a href="./ejym/xbgk/rycj.html">荣誉成就</a></li>
+                                    </ul>
+                                </div>
                             </li>
+                            <li>
+                                <a class="mean"><em>党建工作</em></a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li><a href="./ejym/djgz/dzbjj.html">党支部简介</a></li>
+                                        <li><a href="./ejym/djgz/zzhd.html">组织活动</a></li>
+                                        <li><a href="./ejym/djgz/dzbjj.html">党员风采</a></li>
+                                        <li><a href="./ejym/djgz/dzbjj.html">学习园地</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="mean"><em>专业方向</em></a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li><a href="./ejym/zyfx/jsjyyjs.html">计算机应用技术</a></li>
+                                        <li><a href="./ejym/zyfx/rgznyyy.html">人工智能与应用</a></li>
+                                        <li><a href="./ejym/zyfx/znhlwljs.html">智能互联网络技术</a></li>
+                                        <li><a href="./ejym/zyfx/sjzxyxygl.html">数据中心运行与管理</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="mean"><em>教学科研</em></a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li><a href="./ejym/jxky/kyxm.html">科研项目</a></li>
+                                        <li><a href="./ejym/jxky/xsjz.html">学术讲座</a></li>
+                                        <li><a href="./ejym/jxky/jsjs.html">技术竞赛</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="mean"><em>实训基地</em></a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li><a href="./ejym/sxjd/sxsjs.html">实训室介绍</a></li>
+                                        <li><a href="./ejym/sxjd/xqhz.html">校企合作</a></li>
+                                        <li><a href="./ejym/sxjd/sxsb.html">实训设备</a></li>
+                                        <li><a href="./ejym/sxjd/rycj.html">荣誉成就</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="mean"><em>校友之家</em></a>
+                                <div class="dropdown">
+                                    <ul>
+                                        <li><a href="./ejym/xyzj/xyfc.html">校友风采</a></li>
+                                        <li><a href="./ejym/xyzj/xyhd.html">校友活动</a></li>
+                                        <li><a href="./ejym/xyzj/yxbys.html">优秀毕业生</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a class="mean" href="./ejym/xzzq/xzzq.html"><em chass="download">下载专区</em></a></li>
                         </ul>
-                    </div>
+                    </nav>
                 </div>
             </div>
-
-            <div class="header-bottom container">
-                <div class="logo"></div>
-                <nav class="nav">
-                    <ul>
-                        <li><a class="mean"><em class="home">首页</em></a></li>
+            <div class="header-slideshow">
+                <div class="slideshow">
+                    <ul class="slideImg">
                         <li>
-                            <a class="mean"><em>系部概况</em></a>
-                            <div class="dropdown">
-                                <ul>
-                                    <li><a href="javascript:void(0)">系部简介</a></li>
-                                    <li><a href="javascript:void(0)">办学宗旨</a></li>
-                                    <li><a href="javascript:void(0)">发展历程</a></li>
-                                    <li><a href="javascript:void(0)">荣誉成就</a></li>
-                                </ul>
-                            </div>
+                            <a href="javascript:void(0)">
+                                <img alt="" src="images/slideshow_1.png">
+                            </a>
                         </li>
                         <li>
-                            <a class="mean"><em>党建工作</em></a>
-                            <div class="dropdown">
-                                <ul>
-                                    <li><a href="javascript:void(0)">党支部简介</a></li>
-                                    <li><a href="javascript:void(0)">组织活动</a></li>
-                                    <li><a href="javascript:void(0)">党员风采</a></li>
-                                    <li><a href="javascript:void(0)">学习园地</a></li>
-                                </ul>
-                            </div>
+                            <a href="javascript:void(0)">
+                                <img alt="" src="images/slideshow_2.png">
+                            </a>
                         </li>
                         <li>
-                            <a class="mean"><em>专业方向</em></a>
-                            <div class="dropdown">
-                                <ul>
-                                    <li><a href="javascript:void(0)">计算机应用技术</a></li>
-                                    <li><a href="javascript:void(0)">人工智能与应用</a></li>
-                                    <li><a href="javascript:void(0)">智能互联网络技术</a></li>
-                                    <li><a href="javascript:void(0)">数据中心运行与管理</a></li>
-                                </ul>
-                            </div>
+                            <a href="javascript:void(0)">
+                                <img alt="" src="images/slideshow_3.png">
+                            </a>
                         </li>
-                        <li>
-                            <a class="mean"><em>教学科研</em></a>
-                            <div class="dropdown">
-                                <ul>
-                                    <li><a href="javascript:void(0)">科研项目</a></li>
-                                    <li><a href="javascript:void(0)">学术讲座</a></li>
-                                    <li><a href="javascript:void(0)">技术竞赛</a></li>
-                                </ul>
-                            </div>
+                        <li class="video-slide">
+                            <video id="campus-video" muted playsinline preload="auto">
+                                <source src="./videos/12月24日 (1).mp4" type="video/mp4">
+                                您的浏览器不支持 HTML5 视频。
+                            </video>
                         </li>
-                        <li>
-                            <a class="mean"><em>实训基地</em></a>
-                            <div class="dropdown">
-                                <ul>
-                                    <li><a href="javascript:void(0)">实训室介绍</a></li>
-                                    <li><a href="javascript:void(0)">校企合作</a></li>
-                                    <li><a href="javascript:void(0)">实训设备</a></li>
-                                    <li><a href="javascript:void(0)">荣誉成就</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a class="mean"><em>校友之家</em></a>
-                            <div class="dropdown">
-                                <ul>
-                                    <li><a href="javascript:void(0)">校友风采</a></li>
-                                    <li><a href="javascript:void(0)">校友活动</a></li>
-                                    <li><a href="javascript:void(0)">优秀毕业生</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a class="mean"><em chass="download">下载专区</em></a></li>
                     </ul>
-                </nav>
-            </div>
-        </div>
-        <div class="header-slideshow">
-            <div class="slideshow">
-                <ul class="slideImg">
-                    <li>
-                        <a href="javascript:void(0)">
-                            <img alt="" src="images/slideshow_1.png">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <img alt="" src="images/slideshow_2.png">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <img alt="" src="images/slideshow_3.png">
-                        </a>
-                    </li>
-                    <li class="video-slide">
-                        <video id="campus-video" muted playsinline preload="auto">
-                            <source src="./videos/vido.mp4" type="video/mp4">
-                            您的浏览器不支持 HTML5 视频。
-                        </video>
-                    </li>
-                </ul>
-                <div class="slider-buttons">
-                    <button class="prev">←</button>
-                    <button class="next">→</button>
-                </div>
-                <div class="slider-indicators">
-                    <span class="indicator active"></span>
-                    <span class="indicator"></span>
-                    <span class="indicator"></span>
-                    <span class="indicator"></span>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</header>
-<div class="slideshow-placeholder"></div>
-<section class="section news-section">
-    <div class="page" id="page2">
-        <div class="container">
-            <article class="news-box">
-                <div class="section-header">
-                    <div class="title-wrapper">
-                        <div class="title-decoration"></div>
-                        <h2 class="section-title">新闻动态</h2>
-                        <nav class="title-categories">
-                            <span class="category active" data-category="all">全部</span>
-                            <span class="category" data-category="notice">系部活动</span>
-                            <span class="category" data-category="teaching">教学动态</span>
-                            <span class="category" data-category="competition">竞赛获奖</span>
-                            <span class="category" data-category="internship">校企合作</span>
-                        </nav>
+                    <div class="slider-buttons">
+                        <button class="prev">←</button>
+                        <button class="next">→</button>
                     </div>
-                    <a class="more-btn" href="javascript:void(0)">
-                        更多新闻
-                        <span class="more-arrow">→</span>
-                    </a>
+                    <div class="slider-indicators">
+                        <span class="indicator active"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                        <span class="indicator"></span>
+                    </div>
                 </div>
-                <div class="news-grid">
-                    <section class="news-left">
-                        <a href="#">
-                            <div class="news-card featured" data-category="notice">
+
+            </div>
+        </div>
+    </header>
+    <div class="slideshow-placeholder"></div>
+    <section class="section news-section">
+        <div class="page" id="page2">
+            <div class="container">
+                <article class="news-box">
+                    <div class="section-header">
+                        <div class="title-wrapper">
+                            <div class="title-decoration"></div>
+                            <h2 class="section-title">新闻动态</h2>
+                            <nav class="title-categories">
+                                <span class="category active" data-category="all">全部</span>
+                                <span class="category" data-category="notice">系部活动</span>
+                                <span class="category" data-category="teaching">教学动态</span>
+                                <span class="category" data-category="competition">竞赛获奖</span>
+                                <span class="category" data-category="internship">校企合作</span>
+                            </nav>
+                        </div>
+                        <a class="more-btn" href="./ejym/xwdt/xwdt.html">
+                            更多新闻
+                            <span class="more-arrow">→</span>
+                        </a>
+                    </div>
+                    <div class="news-grid">
+                        <section class="news-left">
+                            <a href="./ejym/xwdt/yfxsd.html">
+                                <div class="news-card featured" data-category="notice">
+                                    <div class="news-image">
+                                        <img alt="系部活动焦点新闻" src="images/new_9.png">
+                                        <div class="news-image-overlay">
+                                            <h3>扬帆新时代 | 计算机系深入学习党的二十届三中全会精神</h3>
+                                            <p>
+                                                2024年11月3日，吕梁高专计算机系分团委在11号楼307教室举办党的二十届三中全会精神宣讲会，青年学子齐聚一堂，深入学习党的最新理论成果，感悟时代脉搏
+                                            </p>
+                                            <div class="news-footer">
+                                                <a class="read-more"
+                                                    href="https://mp.weixin.qq.com/s/735tpj3fVfsZyx-3u4Xm8A"
+                                                    target="_blank">查看详情
+                                                    →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+
+                            <div class="news-card featured" data-category="teaching">
+                                <a href="./ejym/xwdt/04.html">
+                                    <div class="news-image">
+                                        <img alt="教学动态焦点新闻" src="images/04-3.png">
+                                        <div class="news-image-overlay">
+                                            <h3>“心”潮澎湃，“新”向未来 || 计算机系2024级新生入学教育圆满结束！</h3>
+                                            <p>
+                                                我系开展一系列的讲座教育：
+                                            </p>
+                                            <p>
+                                                1、10月11日武艳玲老师演讲《消防安全及用电安全教育》知识
+                                            </p>
+                                            <p>
+                                                2、10月23日薛文宗老师演讲关于《心理健康教育》知识
+                                            </p>
+                                            <div class="news-footer">
+                                                <a class="read-more" href="./ejym/xwdt/04.html" target="_blank">查看详情
+                                                    →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="news-card featured" data-category="competition">
+                                <a href="./ejym/xwdt/05.html">
+                                    <div class="news-image">
+                                        <img alt="竞赛获奖焦点新闻" src="images/new_3.png">
+                                        <div class="news-image-overlay">
+                                            <h3>校园比赛 | 热血开场！大一 VS 大二 篮球争霸赛引燃校园激情</h3>
+                                            <p>
+                                                为了加深2024级新生班级间的相互了解，并强化班级内部的团队合作，同时丰富同学们的课余生活并传承体育竞技精神，我系于10月29日至11月7日期间，在二号楼后侧的户外篮球场上，成功举办了...
+                                            </p>
+                                            <div class="news-footer">
+                                                <a class="read-more" href="./ejym/xwdt/05.html" target="_blank">查看详情
+                                                    →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="news-card featured" data-category="internship">
                                 <div class="news-image">
-                                    <img alt="系部活动焦点新闻" src="images/new_9.png">
+                                    <img alt="校企合作焦点新闻" src="images/no.jpg">
                                     <div class="news-image-overlay">
-                                        <h3>扬帆新时代 | 计算机系深入学习党的二十届三中全会精神</h3>
+                                        <h3>我系与山西盛霖公司签署校企合作协议</h3>
                                         <p>
-                                            2024年11月3日，吕梁高专计算机系分团委在11号楼307教室举办党的二十届三中全会精神宣讲会，青年学子齐聚一堂，深入学习党的最新理论成果，感悟时代脉搏</p>
+                                            学校努力建立和完善校内与校处相结合产学研一体化的高等职业教育实习实训基地，使同学们通过三年的学习、实训和实习成为具有一定专业知识、专业技能、良好的职业道德、德识才学全面发展的应用型专业人才...
+                                        </p>
                                         <div class="news-footer">
-                                            <a class="read-more"
-                                               href="https://mp.weixin.qq.com/s/735tpj3fVfsZyx-3u4Xm8A" target="_blank">查看详情
-                                                →</a>
+                                            <a class="read-more" href="javascript:void(0)">查看详情 →</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </a>
-
-
-                        <div class="news-card featured" data-category="teaching">
-                            <div class="news-image">
-                                <img alt="教学动态焦点新闻" src="images/new_8jpg.jpg">
-                                <div class="news-image-overlay">
-                                    <h3>悦教中期探优行 ——记计算机系中期教学检查</h3>
-                                    <p>
-                                        为深入推进课程思政建设，提升教学质量，计算机系于11月12日在智慧教室举办了2024年教学改革研讨会。会议邀请了多位教育专家，就专业课程改革、教学方法创新等主题展开深入讨论...</p>
-                                    <div class="news-footer">
-                                        <a class="read-more" href="https://mp.weixin.qq.com/s/vYi6baBrM8nuxnVA-2PBSw"
-                                           target="_blank">查看详情 →</a>
-                                    </div>
+                        </section>
+                        <div class="news-right">
+                            <div class="news-card" data-category="notice">
+                                <div class="news-meta">
+                                    <span class="news-tag">系部活动</span>
+                                    <span class="news-date">2024-11-03</span>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="news-card featured" data-category="competition">
-                            <div class="news-image">
-                                <img alt="竞赛获奖焦点新闻" src="images/new_3.png">
-                                <div class="news-image-overlay">
-                                    <h3>校园比赛 | 热血开场！大一 VS 大二 篮球争霸赛引燃校园激情</h3>
-                                    <p>
-                                        为了加深2024级新生班级间的相互了解，并强化班级内部的团队合作，同时丰富同学们的课余生活并传承体育竞技精神，我系于10月29日至11月7日期间，在二号楼后侧的户外篮球场上，成功举办了...</p>
-                                    <div class="news-footer">
-                                        <a class="read-more" href="https://mp.weixin.qq.com/s/1rRycs_xcsjALOPyJ31_xA"
-                                           target="_blank">查看详情 →</a>
+                                <a href="./ejym/xwdt/yfxsd.html">
+                                    <div class="news-content">
+                                        <h3>扬帆新时代 | 计算机系深入学习党的二十届三中全会精神</h3>
+                                        <p>2024年11月3日，吕梁高专计算机系分团委在11号楼307教室举办党的二十届三中全会精神宣讲会，
+                                            青年学子齐聚一堂，深入学习党的最新理论成果，感悟时代脉搏</p>
+                                        <div class="news-footer">
+                                            <a class="read-more"
+                                                href="https://mp.weixin.qq.com/s/735tpj3fVfsZyx-3u4Xm8A"
+                                                target="_blank">查看详情 →</a>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
+                                </a>
 
-                        <div class="news-card featured" data-category="internship">
-                            <div class="news-image">
-                                <img alt="校企合作焦点新闻" src="images/no.jpg">
-                                <div class="news-image-overlay">
-                                    <h3>我系与山西盛霖公司签署校企合作协议</h3>
-                                    <p>
-                                        学校努力建立和完善校内与校处相结合产学研一体化的高等职业教育实习实训基地，使同学们通过三年的学习、实训和实习成为具有一定专业知识、专业技能、良好的职业道德、德识才学全面发展的应用型专业人才...</p>
-                                    <div class="news-footer">
-                                        <a class="read-more" href="javascript:void(0)">查看详情 →</a>
-                                    </div>
-                                </div>
                             </div>
-                        </div>
-                    </section>
-                    <div class="news-right">
-                        <div class="news-card" data-category="notice">
-                            <div class="news-meta">
-                                <span class="news-tag">系部活动</span>
-                                <span class="news-date">2024-11-03</span>
-                            </div>
-                            <a href="#">
-                                <div class="news-content">
-                                    <h3>扬帆新时代 | 计算机系深入学习党的二十届三中全会精神</h3>
-                                    <p>2024年11月3日，吕梁高专计算机系分团委在11号楼307教室举办党的二十届三中全会精神宣讲会，
-                                        青年学子齐聚一堂，深入学习党的最新理论成果，感悟时代脉搏</p>
-                                    <div class="news-footer">
-                                        <a class="read-more" href="https://mp.weixin.qq.com/s/735tpj3fVfsZyx-3u4Xm8A"
-                                           target="_blank">查看详情 →</a>
-                                    </div>
+                            <div class="news-card" data-category="teaching">
+                                <div class="news-meta">
+                                    <span class="news-tag">教学动态</span>
+                                    <span class="news-date">2024-11-18</span>
                                 </div>
-                            </a>
+                                <a href="./ejym/xwdt/06.html">
+                                    <div class="news-content">
+                                        <h3>悦教中期探优行 ——记计算机系中期教学检查</h3>
+                                        <p>
+                                            为深入了解计算机系教学运行情况，提升教学质量，2024年11月18日上午9点，学校教务处以及相关领导对计算机系进行了全面的中期教学检查工作。此次检查不仅是对计算机系教学工作的一次全面审视，更是对教学质量的一次有力推动。
+                                        </p>
+                                        <div class="news-footer">
+                                            <a class="read-more"
+                                                href="https://mp.weixin.qq.com/s/vYi6baBrM8nuxnVA-2PBSw"
+                                                target="_blank">查看详情 →</a>
+                                        </div>
+                                    </div>
+                                </a>
 
-                        </div>
-                        <div class="news-card" data-category="teaching">
-                            <div class="news-meta">
-                                <span class="news-tag">教学动态</span>
-                                <span class="news-date">2024-11-18</span>
                             </div>
-                            <a href="#">
-                                <div class="news-content">
-                                    <h3>悦教中期探优行 ——记计算机系中期教学检查</h3>
-                                    <p>
-                                        为深入了解计算机系教学运行情况，提升教学质量，2024年11月18日上午9点，学校教务处以及相关领导对计算机系进行了全面的中期教学检查工作。此次检查不仅是对计算机系教学工作的一次全面审视，更是对教学质量的一次有力推动。</p>
-                                    <div class="news-footer">
-                                        <a class="read-more" href="https://mp.weixin.qq.com/s/vYi6baBrM8nuxnVA-2PBSw"
-                                           target="_blank">查看详情 →</a>
-                                    </div>
+                            <div class="news-card" data-category="teaching">
+                                <div class="news-meta">
+                                    <span class="news-tag">教学动态</span>
+                                    <span class="news-date">2024-11-18</span>
                                 </div>
-                            </a>
+                                <a href="./ejym/xwdt/06.html">
+                                    <div class="news-content">
+                                        <h3>悦教中期探优行 ——记计算机系中期教学检查</h3>
+                                        <p>
+                                            为深入了解计算机系教学运行情况，提升教学质量，2024年11月18日上午9点，学校教务处以及相关领导对计算机系进行了全面的中期教学检查工作。此次检查不仅是对计算机系教学工作的一次全面审视，更是对教学质量的一次有力推动。
+                                        </p>
+                                        <div class="news-footer">
+                                            <a class="read-more"
+                                                href="https://mp.weixin.qq.com/s/vYi6baBrM8nuxnVA-2PBSw"
+                                                target="_blank">查看详情 →</a>
+                                        </div>
+                                    </div>
+                                </a>
 
-                        </div>
-                        <div class="news-card" data-category="teaching">
-                            <div class="news-meta">
-                                <span class="news-tag">教学动态</span>
-                                <span class="news-date">2024-11-18</span>
                             </div>
-                            <a href="#">
-                                <div class="news-content">
-                                    <h3>悦教中期探优行 ——记计算机系中期教学检查</h3>
-                                    <p>
-                                        为深入了解计算机系教学运行情况，提升教学质量，2024年11月18日上午9点，学校教务处以及相关领导对计算机系进行了全面的中期教学检查工作。此次检查不仅是对计算机系教学工作的一次全面审视，更是对教学质量的一次有力推动。</p>
-                                    <div class="news-footer">
-                                        <a class="read-more" href="https://mp.weixin.qq.com/s/vYi6baBrM8nuxnVA-2PBSw"
-                                           target="_blank">查看详情 →</a>
-                                    </div>
-                                </div>
-                            </a>
-
                         </div>
                     </div>
-                </div>
-            </article>
+                </article>
+            </div>
         </div>
-    </div>
-</section>
-<!--
+    </section>
+    <!--
 <div style="height: 100vh; background-color: #f0f0f0;">
     &lt;!&ndash; 测试 &ndash;&gt;
     <h1>占空白，用来测试</h1>
 </div>
 -->
 
-<section class="campus-section container">
-    <div class="campus-container">
-        <div class="row g-0">
-            <!-- 左侧导航 -->
-            <div class="col-md-3">
-                <div class="category-nav">
-                    <div class="title-wrapper">
-                        <div class="title-decoration"></div>
-                        <h2 class="section-title">校园风采</h2>
-                    </div>
-                    <div class="category-list">
-                        <button class="category-btn category-active" data-category="environment">校园环境</button>
-                        <button class="category-btn" data-category="facility">教学设施</button>
-                        <button class="category-btn" data-category="activity">学生活动</button>
-                        <button class="category-btn" data-category="training">实训场所</button>
-                        <button class="category-btn" data-category="life">校园生活</button>
-                        <button class="category-btn" data-category="special">特色项目</button>
-                    </div>
-                </div>
-            </div>
 
-            <!-- 右侧内容区 -->
-            <div class="col-md-9">
-                <div class="content-wrapper">
-                    <div class="content-container">
-                        <!-- 头部搜索和筛选 -->
-                        <div class="content-header">
-                            <div class="header-top">
-                                <h3 class="content-title">校园环境</h3>
+    <section class="notification-section">
+        <div class="page" id="page3">
+            <div class="container">
+                <article class="notification-box">
+                    <header class="notification-header">
+                        <div class="section-header">
+                            <div class="title-wrapper">
+                                <div class="title-decoration"></div>
+                                <h2 class="section-title">通知公告</h2>
                             </div>
-                            <p class="content-subtitle current-category-desc">展示我校优美的校园环境和现代化教学设施</p>
                         </div>
+                        <nav class="filter-tabs">
+                            <button class="filter-btn active" data-filter="all">全部</button>
+                            <button class="filter-btn" data-filter="department">系部通知</button>
+                            <button class="filter-btn" data-filter="academic">教务通知</button>
+                            <button class="filter-btn" data-filter="student">学工通知</button>
+                        </nav>
+                    </header>
+                    <div class="notification-grid">
+                        <article class="notification-card" data-category="academic">
+                            <a href="./ejym/tz/jwtz3.html">
+                                <div class="notification-badge">置顶</div>
+                                <div class="notification-date">
+                                    <img alt="" src="./images/jwtz4.webp">
+                                </div>
+                                <div class="notification-content">
+                                    <span class="notification-tag academic">教务通知</span>
+                                    <span class="date-month">2024-10-25</span>
+                                    <h3 class="notification-title">调研学习找差距，交流互鉴促提升——计算机系负责人秦瑞峰带队赴兄弟院校交流学习</h3>
+                                    <p class="notification-text">
+                                        为深入学习兄弟院校在产业建设、基层教学组织建设、人才培养以及实训室建设等方面的先进经验，我系负责人秦瑞峰亲自带队，于4月24日至26日前往晋中职业技术学院、山西职业技术学院及山西林业技术学院进行为期三天的调研交流活动。（详细……）</p>
+                                </div>
+                            </a>
 
-                        <!-- 图片展示区 -->
-                        <div class="gallery-grid">
-                            <!-- 大图项目 -->
-                            <div class="gallery-item featured" data-category="environment">
-                                <div class="gallery-image-wrapper">
-                                    <img src="images/new_9.png" alt="主教学楼" class="gallery-img" loading="lazy">
-                                    <div class="gallery-overlay">
-                                        <div class="overlay-content">
-                                            <h3 class="item-title">主教学楼</h3>
-                                            <p class="item-description">现代化的教学环境，为学生提供良好的学习场所</p>
-                                            <div class="item-meta">
-                                                <span class="view-count">浏览: 10086123</span>
-                                                <button class="share-btn">分享</button>
-                                            </div>
-                                        </div>
-                                    </div>
+                        </article>
+                        <article class="notification-card" data-category="department">
+                            <a href="./ejym/tz/xbtz1.html">
+                                <div class="notification-date">
+                                    <img alt="" src="./images/xbtz1.png">
                                 </div>
-                            </div>
+                                <div class="notification-content">
+                                    <span class="notification-tag department">系部通知</span>
+                                    <span class="date-month">2024-08-15</span>
+                                    <h3 class="notification-title">勤学不辍初心如磐，AI赋能智驭未来——吕梁师范高等专科学校计算机系课程培训</h3>
+                                    <p class="notification-text">
+                                        为提升我校计算机系教师队伍的专业素养以及对人工智能（AI）时代下新教育需求的适应与应对能力，在学校领导的支持下，吕梁师范高等专科学校计算机系邀请华中师范大学人工智能教育学部为计算机系专业的教师们开展了为期6天的培训。</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="notification-card" data-category="department">
+                            <a href="./ejym/tz/xbtz2.html">
+                                <div class="notification-date">
+                                    <img alt="" src="./images/xbtz2.jpg">
+                                </div>
+                                <div class="notification-content">
+                                    <span class="notification-tag department">系部通知</span>
+                                    <span class="date-month">2024-10-25</span>
+                                    <h3 class="notification-title">赋能成长，蓄势前行 ——吕梁师范高等专科学校计算机系召开教研会</h3>
+                                    <p class="notification-text">
+                                        4月23日下午，吕梁师范高等专科学校计算机系在12号楼215会议室召开了教育教研工作会议，吕梁师范高等专科学校校长马林出席会议并讲话、计算机系主任秦瑞峰主持会议，计算机系所有教师参会。（详细……）</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="notification-card" data-category="department">
+                            <a href="./ejym/tz/xbtz3.html">
+                                <div class="notification-date">
+                                    <img alt="" src="./images/xbtz3.png">
+                                </div>
+                                <div class="notification-content">
+                                    <span class="notification-tag department">系部通知</span>
+                                    <span class="date-month">2024-10-25</span>
+                                    <h3 class="notification-title">热血青春，我为篮狂————吕梁师范高等专科学校计算机系第一届篮球联赛圆满结束</h3>
+                                    <p class="notification-text">
+                                        5月28日，吕梁师范高等专科学校计算机系第一届篮球联赛开幕式在校田径场隆重召开。计算机系负责人秦瑞峰主持并宣布篮球联赛正式开始。党委委员马科峰、下乡送技送教办公室负责人薛建平、教务处负责人樊卫平、综合办负责人白宝旺、学生处负责人冯军平出席开幕式</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="notification-card" data-category="academic">
+                            <a href="./ejym/tz/jwtz1.html">
+                                <div class="notification-date">
+                                    <img alt="" src="./images/jwtz1.jpg">
+                                </div>
+                                <div class="notification-content">
+                                    <span class="notification-tag academic">教务通知</span>
+                                    <span class="date-month">2024-04-15</span>
+                                    <h3 class="notification-title">校党委书记王三虎深入一线检查各教学部门工作</h3>
+                                    <p class="notification-text">
+                                        2024年4月8日上午，吕梁师范高等专科学校党委书记王三虎采取“三不两直”方式对各教学部门进行了突击巡视检查。王三虎书记直接深入课堂，实地抽查了几位教师的授课情况，查看了教师的教案，现场抽查了部分教师的在岗情况，课后与师生进行了亲切交谈。</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="notification-card" data-category="academic">
+                            <a href="./ejym/tz/jwtz2.html">
+                                <div class="notification-date">
+                                    <img alt="" src="./images/slideshow_21.png">
+                                </div>
+                                <div class="notification-content">
+                                    <span class="notification-tag academic">教务通知</span>
+                                    <span class="date-month">2024-10-25</span>
+                                    <h3 class="notification-title">未来发展计划</h3>
+                                    <p class="notification-text">
+                                        第一，以学习者为中心改革教育教学。由教主导学，向学习者为中心的人才培养理念的转变，是高等职业教育回应受教育者个性化需求的必然之举。教育教学改革是人才培养改革重中之重。当前，深化教育教学改革需要以课堂革命更新教育观念、教学方式，以校企共建打造优质教育教学资源，实现人才培养从标准化向差异化、多样化、个性化转变，以教学改革推动学习者为中心的学习新范式建构。吕梁师</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="notification-card" data-category="student">
+                            <a href="./ejym/tz/xghd1.html">
+                                <div class="notification-date">
+                                    <img alt="" src="./images/xghd1.jpg">
+                                </div>
+                                <div class="notification-content">
+                                    <span class="notification-tag student">学工通知</span>
+                                    <h3 class="notification-title">廉韵润初心，清风沐校园— — 旅游系开展“清廉学校”建设主题活动（一）</h3>
+                                    <p class="notification-text">
+                                        “廉”是中华优秀传统文化的思想精华和道德精髓，让廉洁之风沐师生，廉洁之德育校园，廉洁之风滋养心灵，孕育清正之气。11月18日晚，在旅游系临时党支部组织动员下，全系旅游英语专业和研学旅行管理与服务专业的9个班级，开展了以建设“清廉学校”为主题的主题班会，各班班长带领全班同学对这一主题展开了热烈讨论，并组织观看纪录片《于成龙》。详细（……）</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="notification-card" data-category="student">
+                            <a href="#">
+                                <div class="notification-date">
+                                    <img alt="" src="./images/librarybooks.png">
+                                </div>
+                                <div class="notification-content">
+                                    <span class="notification-tag student">学工通知</span>
+                                    <h3 class="notification-title">计算机系"互联网+"创新创业大赛报名通知</h3>
+                                    <p class="notification-text">
+                                        为促进我系学生创新创业能力的培养，现举办2024年"互联网+"创新创业大赛...</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="notification-card" data-category="student">
+                            <a href="#">
+                                <div class="notification-date">
+                                    <img alt="" src="./images/librarybooks.png">
+                                </div>
+                                <div class="notification-content">
+                                    <span class="notification-tag student">学工通知</span>
+                                    <h3 class="notification-title">计算机系"互联网+"创新创业大赛报名通知</h3>
+                                    <p class="notification-text">
+                                        为促进我系学生创新创业能力的培养，现举办2024年"互联网+"创新创业大赛...</p>
+                                </div>
+                            </a>
+                        </article>
 
-                            <!-- 普通图片项目 -->
-                            <div class="gallery-item" data-category="facility">
-                                <div class="gallery-image-wrapper">
-                                    <img src="images/new_9.png" alt="实验室" class="gallery-img" loading="lazy">
-                                    <div class="gallery-overlay">
-                                        <div class="overlay-content">
-                                            <h3 class="item-title">计算机实验室</h3>
-                                            <p class="item-description">配备先进的实验设备</p>
-                                            <div class="item-meta">
-                                                <span class="view-count">浏览: 10086123</span>
-                                                <button class="share-btn">分享</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item" data-category="facility">
-                                <div class="gallery-image-wrapper">
-                                    <img src="images/new_9.png" alt="实验室" class="gallery-img" loading="lazy">
-                                    <div class="gallery-overlay">
-                                        <div class="overlay-content">
-                                            <h3 class="item-title">计算机实验室</h3>
-                                            <p class="item-description">配备先进的实验设备</p>
-                                            <div class="item-meta">
-                                                <span class="view-count">浏览: 10086123</span>
-                                                <button class="share-btn">分享</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gallery-item" data-category="facility">
-                                <div class="gallery-image-wrapper">
-                                    <img src="images/new_9.png" alt="实验室" class="gallery-img" loading="lazy">
-                                    <div class="gallery-overlay">
-                                        <div class="overlay-content">
-                                            <h3 class="item-title">计算机实验室</h3>
-                                            <p class="item-description">配备先进的实验设备</p>
-                                            <div class="item-meta">
-                                                <span class="view-count">浏览: 10086123</span>
-                                                <button class="share-btn">分享</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gallery-item" data-category="facility">
-                                <div class="gallery-image-wrapper">
-                                    <img src="images/new_9.png" alt="实验室" class="gallery-img" loading="lazy">
-                                    <div class="gallery-overlay">
-                                        <div class="overlay-content">
-                                            <h3 class="item-title">计算机实验室</h3>
-                                            <p class="item-description">配备先进的实验设备</p>
-                                            <div class="item-meta">
-                                                <span class="view-count">浏览: 10086123</span>
-                                                <button class="share-btn">分享</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gallery-item" data-category="facility">
-                                <div class="gallery-image-wrapper">
-                                    <img src="images/new_9.png" alt="实验室" class="gallery-img" loading="lazy">
-                                    <div class="gallery-overlay">
-                                        <div class="overlay-content">
-                                            <h3 class="item-title">计算机实验室</h3>
-                                            <p class="item-description">配备先进的实验设备</p>
-                                            <div class="item-meta">
-                                                <span class="view-count">浏览: 10086123</span>
-                                                <button class="share-btn">分享</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gallery-item" data-category="facility">
-                                <div class="gallery-image-wrapper">
-                                    <img src="images/new_9.png" alt="实验室" class="gallery-img" loading="lazy">
-                                    <div class="gallery-overlay">
-                                        <div class="overlay-content">
-                                            <h3 class="item-title">计算机实验室</h3>
-                                            <p class="item-description">配备先进的实验设备</p>
-                                            <div class="item-meta">
-                                                <span class="view-count">浏览: 10086123</span>
-                                                <button class="share-btn">分享</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gallery-item" data-category="facility">
-                                <div class="gallery-image-wrapper">
-                                    <img src="images/new_9.png" alt="实验室" class="gallery-img" loading="lazy">
-                                    <div class="gallery-overlay">
-                                        <div class="overlay-content">
-                                            <h3 class="item-title">计算机实验室</h3>
-                                            <p class="item-description">配备先进的实验设备</p>
-                                            <div class="item-meta">
-                                                <span class="view-count">浏览: 10086123</span>
-                                                <button class="share-btn">分享</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- 加载更多按钮 -->
-                        <div class="campus-footer">
-                            <button class="load-more">加载更多</button>
-                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 图片预览模态框 -->
-    <div class="image-preview-modal">
-        <div class="modal-content">
-            <button class="modal-close">×</button>
-            <img src="" alt="" class="preview-image">
-            <div class="preview-info">
-                <h3 class="preview-title"></h3>
-                <p class="preview-description"></p>
-                <div class="preview-meta">
-                    <span class="preview-views"></span>
-                    <button class="preview-share">分享</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="notification-section">
-    <div class="page" id="page3">
-        <div class="container">
-            <article class="notification-box">
-                <header class="notification-header">
-                    <div class="section-header">
-                        <div class="title-wrapper">
-                            <div class="title-decoration"></div>
-                            <h2 class="section-title">通知公告</h2>
-                        </div>
-                    </div>
-                    <nav class="filter-tabs">
-                        <button class="filter-btn active" data-filter="all">全部</button>
-                        <button class="filter-btn" data-filter="department">系部通知</button>
-                        <button class="filter-btn" data-filter="academic">教务通知</button>
-                        <button class="filter-btn" data-filter="student">学工通知</button>
-                    </nav>
-                </header>
-                <div class="notification-grid">
-                    <article class="notification-card" data-category="academic">
-                        <a href="#">
-                            <div class="notification-badge">置顶</div>
-                            <div class="notification-date">
-                                <img alt="" src="./images/librarybooks.png">
-                            </div>
-                            <div class="notification-content">
-                                <span class="notification-tag academic">教务通知</span>
-                                <span class="date-month">2024-10-25</span>
-                                <h3 class="notification-title">关于2024年秋季学期期末考试安排的通知</h3>
-                                <p class="notification-text">
-                                    为确保期末考试工作顺利进行，现将2024年秋季学期期末考试相关事项通知如下...</p>
-                            </div>
-                        </a>
-
-                    </article>
-                    <article class="notification-card" data-category="department">
-                        <a href="#">
-                            <div class="notification-date">
-                                <img alt="" src="./images/librarybooks.png">
-                            </div>
-                            <div class="notification-content">
-                                <span class="notification-tag department">系部通知</span>
-                                <span class="date-month">2024-10-25</span>
-                                <h3 class="notification-title">关于开展2024年学生社会实践活动的通知</h3>
-                                <p class="notification-text">
-                                    为深入贯彻落实习近平新时代中国特色社会主义思想，培养学生实践能力...</p>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="notification-card" data-category="department">
-                        <a href="#">
-                            <div class="notification-date">
-                                <img alt="" src="./images/librarybooks.png">
-                            </div>
-                            <div class="notification-content">
-                                <span class="notification-tag department">系部通知</span>
-                                <span class="date-month">2024-10-25</span>
-                                <h3 class="notification-title">关于开展2024年学生社会实践活动的通知</h3>
-                                <p class="notification-text">
-                                    为深入贯彻落实习近平新时代中国特色社会主义思想，培养学生实践能力...</p>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="notification-card" data-category="department">
-                        <a href="#">
-                            <div class="notification-date">
-                                <img alt="" src="./images/librarybooks.png">
-                            </div>
-                            <div class="notification-content">
-                                <span class="notification-tag department">系部通知</span>
-                                <span class="date-month">2024-10-25</span>
-                                <h3 class="notification-title">关于开展2024年学生社会实践活动的通知</h3>
-                                <p class="notification-text">
-                                    为深入贯彻落实习近平新时代中国特色社会主义思想，培养学生实践能力...</p>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="notification-card" data-category="academic">
-                        <a href="#">
-                            <div class="notification-date">
-                                <img alt="" src="./images/librarybooks.png">
-                            </div>
-                            <div class="notification-content">
-                                <span class="notification-tag academic">教务通知</span>
-                                <span class="date-month">2024-10-25</span>
-                                <h3 class="notification-title">关于2024年秋季学期期末考试安排的通知</h3>
-                                <p class="notification-text">
-                                    为确保期末考试工作顺利进行，现将2024年秋季学期期末考试相关事项通知如下...</p>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="notification-card" data-category="academic">
-                        <a href="#">
-                            <div class="notification-date">
-                                <img alt="" src="./images/librarybooks.png">
-                            </div>
-                            <div class="notification-content">
-                                <span class="notification-tag academic">教务通知</span>
-                                <span class="date-month">2024-10-25</span>
-                                <h3 class="notification-title">关于2024年秋季学期期末考试安排的通知</h3>
-                                <p class="notification-text">
-                                    为确保期末考试工作顺利进行，现将2024年秋季学期期末考试相关事项通知如下...</p>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="notification-card" data-category="student">
-                        <a href="#">
-                            <div class="notification-date">
-                                <img alt="" src="./images/librarybooks.png">
-                            </div>
-                            <div class="notification-content">
-                                <span class="notification-tag student">学工通知</span>
-                                <h3 class="notification-title">计算机系"互联网+"创新创业大赛报名通知</h3>
-                                <p class="notification-text">
-                                    为促进我系学生创新创业能力的培养，现举办2024年"互联网+"创新创业大赛...</p>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="notification-card" data-category="student">
-                        <a href="#">
-                            <div class="notification-date">
-                                <img alt="" src="./images/librarybooks.png">
-                            </div>
-                            <div class="notification-content">
-                                <span class="notification-tag student">学工通知</span>
-                                <h3 class="notification-title">计算机系"互联网+"创新创业大赛报名通知</h3>
-                                <p class="notification-text">
-                                    为促进我系学生创新创业能力的培养，现举办2024年"互联网+"创新创业大赛...</p>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="notification-card" data-category="student">
-                        <a href="#">
-                            <div class="notification-date">
-                                <img alt="" src="./images/librarybooks.png">
-                            </div>
-                            <div class="notification-content">
-                                <span class="notification-tag student">学工通知</span>
-                                <h3 class="notification-title">计算机系"互联网+"创新创业大赛报名通知</h3>
-                                <p class="notification-text">
-                                    为促进我系学生创新创业能力的培养，现举办2024年"互联网+"创新创业大赛...</p>
-                            </div>
-                        </a>
-                    </article>
-
-                </div>
-                <div class="notification-footer">
-                    <button class="load-more">加载更多</button>
-                </div>
-            </article>
-        </div>
-    </div>
-</section>
-
-<section class="section faculty-section">
-    <div class="page" id="page4">
-        <div class="container">
-            <header class="faculty-header">
-                <div class="faculty-title">
-                    <h2>师资队伍</h2>
-                </div>
-                <a class="more-btn" href="javascript:void(0)">MORE 更多</a>
-            </header>
-
-            <div class="faculty-container">
-                <article class="faculty-content">
-                    <div class="faculty-team-txt">
-                    </div>
-                    <div class="faculty-image">
-                        <div class="faculty-image-wrapper">
-                            <img alt="" src="">
-                        </div>
+                    <div class="notification-footer">
+                        <button class="load-more">加载更多</button>
                     </div>
                 </article>
+            </div>
+        </div>
+    </section>
 
-                <div class="faculty-nav">
-                    <button class="nav-btn prev">←</button>
-                    <button class="nav-btn next">→</button>
-                </div>
+    <section class="section faculty-section">
+        <div class="page" id="page4">
+            <div class="container">
+                <header class="faculty-header">
+                    <div class="faculty-title">
+                        <h2>师资队伍</h2>
+                    </div>
+                    <a class="more-btn" href="javascript:void(0)">MORE 更多</a>
+                </header>
 
-                <div class="pagination">
-                    <span class="page-dot active"></span>
-                    <span class="page-dot"></span>
-                    <span class="page-dot"></span>
-                    <span class="page-dot"></span>
-                    <span class="page-dot"></span>
+                <div class="faculty-container">
+                    <article class="faculty-content">
+                        <div class="faculty-team-txt">
+                        </div>
+                        <div class="faculty-image">
+                            <div class="faculty-image-wrapper">
+                                <img alt="" src="">
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="faculty-nav">
+                        <button class="nav-btn prev">←</button>
+                        <button class="nav-btn next">→</button>
+                    </div>
+
+                    <div class="pagination">
+                        <span class="page-dot active"></span>
+                        <span class="page-dot"></span>
+                        <span class="page-dot"></span>
+                        <span class="page-dot"></span>
+                        <span class="page-dot"></span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<section class="section links-section">
-    <h1 class="kuaisudaohang-title">-----快速导航-----</h1>
-    <div class="kuaisudaohang">
-        <div class="button-container">
-            <a class="button" href="./denglu.html">教务管理</a>
-            <a class="button" href="./index.html">返回首页</a>
-            <a class="button" href="http://www.llsz.edu.cn/">学校官网</a>
-            <a class="button" href="#">学校官网</a>
-            <a class="button" href="#">学校官网</a>
-        </div>
-    </div>
-</section>
-<footer class="footer-section">
-    <div class="page" id="page5">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <div class="contact-info">
-                        <h3>联系我们</h3>
-                        <p>
-                            <img alt="校址" height="18px" src="./images/address.svg" width="18px">
-                            山西省吕梁市方山县大武镇保安村
-                        </p>
-                        <p>
-                            <img alt="电话" height="18px" src="./images/phone.svg" width="18px">
-                            <a href="tel:0358-2286036">0358-2286036</a> /
-                            <a href="tel:0358-2286039">2286039</a>
-                        </p>
-                        <p>
-                            <img alt="邮箱" height="18px" src="./images/email.svg" width="18px">
-                            <a href="mailto:xxxxx@llsz.edu.cn">xxxxx@llsz.edu.cn</a>
-                        </p>
+    </section>
+    <footer class="footer-section">
+        <div class="page" id="page5">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-col">
+                        <div class="contact-info">
+                            <h3>联系我们</h3>
+                            <p>
+                                <img alt="校址" height="18px" src="./images/address.svg" width="18px">
+                                山西省吕梁市方山县大武镇保安村
+                            </p>
+                            <p>
+                                <img alt="电话" height="18px" src="./images/phone.svg" width="18px">
+                                <a href="tel:0358-2286036">0358-2286036</a> /
+                                <a href="tel:0358-2286039">2286039</a>
+                            </p>
+                            <p>
+                                <img alt="邮箱" height="18px" src="./images/email.svg" width="18px">
+                                <a href="mailto:xxxxx@llsz.edu.cn">xxxxx@llsz.edu.cn</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>快速导航</h3>
+                        <ul class="footer-links">
+                            <li><a href="javascript:void(0)" onclick="Tip()">系部概况</a></li>
+                            <li><a href="javascript:void(0)" onclick="Tip()">专业方向</a></li>
+                            <li><a href="javascript:void(0)" onclick="Tip()">教学科研</a></li>
+                            <li><a href="http://llsz.edu.cn:8896" target="_blank">教务系统</a></li>
+                            <li><a href="http://llsz.edu.cn/" target="_blank">校园门户</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>关注我们</h3>
+                        <div class="qr-codes">
+                            <div class="qr-code">
+                                <img alt="微信公众号" height="120" src="images/QR.jpg">
+                                <p>微信公众号</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="footer-col">
-                    <h3>快速导航</h3>
-                    <ul class="footer-links">
-                        <li><a href="javascript:void(0)" onclick="Tip()">系部概况</a></li>
-                        <li><a href="javascript:void(0)" onclick="Tip()">专业方向</a></li>
-                        <li><a href="javascript:void(0)" onclick="Tip()">教学科研</a></li>
-                        <li><a href="http://llsz.edu.cn:8896" target="_blank">教务系统</a></li>
-                        <li><a href="http://llsz.edu.cn/" target="_blank">校园门户</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>关注我们</h3>
-                    <div class="qr-codes">
-                        <div class="qr-code">
-                            <img alt="微信公众号" height="120" src="images/QR.jpg">
-                            <p>微信公众号</p>
+                <div class="footer-bottom">
+                    <div class="copyright">
+                        <p>Copyright © 2024 吕梁师范高等专科学校计算机系 版权所有</p>
+                        <p>ICP备案号：晋ICP备?????????????????号-1</p>
+                    </div>
+                    <div class="back-to-top">
+                        <div class="back-to-top-content">
+                            <span class="arrow">&uarr;</span>
+                            <span class="text">TOP</span>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <div class="copyright">
-                    <p>Copyright © 2024 吕梁师范高等专科学校计算机系 版权所有</p>
-                    <p>ICP备案号：晋ICP备?????????????????号-1</p>
-                </div>
-                <div class="back-to-top">
-                    <i class="fas fa-arrow-up"></i>
-                </div>
-            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 </body>
+
 </html>

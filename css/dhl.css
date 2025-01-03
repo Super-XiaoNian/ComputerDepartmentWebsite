@@ -1,0 +1,350 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    list-style-type: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+
+/*body所有元素的基础设置*/
+body {
+    color: black;
+    overflow-x: hidden;  /*若文字超过浏览器当前宽度，取消滚动*/
+    
+}
+
+/*设置服务器字体(实际上是引入图标)*/
+@font-face {
+    font-family: "icon";
+    src: url("../fonts/icon.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+/*header盒子，里面放小信息，导航栏以及子菜单，还有轮播图*/
+.header-box {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    background:linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+    position: fixed;
+    top: 0; /* 距离顶部0 */
+}
+
+.header-top {
+    height: 40px;
+    line-height: 40px;
+    background-color: #004b9b;
+}
+
+/*小信息的全部内容*/
+.header-content {
+    font-size: 12px;
+    color: #E0E0E0;
+}
+
+/*小信息左侧内容*/
+.time-text {
+    color: #4A90E2;
+    font-weight: bold;
+}
+
+/*小信息右侧内容*/
+.header-content-right {
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+.header-content-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.header-content-right ul li {
+    margin-right: 15px;
+}
+
+.header-content-right ul li a {
+    color: #E0E0E0;
+    text-decoration: none;
+    transition: transform 0.4s ease;
+}
+
+.header-content-right ul li a:hover {
+    color: #FFFFFF;
+    cursor: pointer;  /*鼠标悬停到某一元素时，会把光标变成点击那个手掌*/
+}
+
+.link1 {
+    background: url("../images/School_emblem_s_alpha.png") left center no-repeat;
+    padding-left: 23px;
+}
+
+.link2 {
+    background: url("../images/librarybooks.png") left center no-repeat;
+    padding-left: 23px;
+}
+
+.link3 {
+    background: url("../images/student_system.png") left center no-repeat;
+    padding-left: 23px;
+}
+
+.link4 {
+    background: url("../images/history.png") left center no-repeat;
+    padding-left: 23px;
+}
+
+.link6 {
+    background: url("../images/english.png") left center no-repeat;
+    padding-left: 23px;
+}
+
+.link7 {
+    cursor: pointer;
+    position: relative;
+}
+
+.link1, .link2, .link3, .link4, .link6, .link7 {
+    background-size: 1.2em 1.2em;
+}
+
+.search-icon {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+    position: absolute;
+    right: 0;
+}
+/*搜索栏的盒子*/
+.search-box {
+    right: 0;  /*决定了往哪个方向对齐然后展开*/
+    width: 0;
+    height: 30px;
+    padding: 0 20px;
+    outline: none;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    opacity: 0;  /*元素显示*/
+    transition: width 0.4s ease-in-out, opacity 0.4s ease-in-out;  /*展开动画*/
+}
+
+.link7:hover .search-box {
+    width: 200px;  /*展开的高度*/
+    opacity: 1;
+}
+
+.link7:hover .search-icon {
+    color: #007bff;
+}
+
+/*logo图标，导航栏，以及导航栏所对应的文字*/
+.header-bottom{
+    position: relative;
+    height: 80px;
+    display: flex;
+    align-items: center;  /*flex布局下的当前元素的对齐方式*/
+    justify-content: space-between;  /*两端对齐*/
+}
+
+/*logo图标*/
+.logo {
+    height: 100px;
+    width: 400px;
+    background: url("../images/School_emable_index.png") left center no-repeat;
+    background-size: 600px auto;
+
+}
+
+/*导航栏的基础设置*/
+.nav > ul {
+    display: flex;
+    align-items: center;
+}
+
+.nav > ul > li{
+    position: relative;
+    list-style: none;
+    padding: 10px 10px;
+    font-size: 18px;
+}
+
+.nav > ul > li:hover{
+    color:red;
+}
+
+/*导航栏文字的基础设置*/
+.mean em{
+    font-style: normal;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/*设置导航栏每个菜单右侧文字的下箭头*/
+.mean em:after{
+    font-family: "icon", serif;
+    content: "\eaed"; /*引用服务器字体里面的某个符号*/
+    font-size: 10px;
+    margin-left: 5px;
+    color: #FFFFFF;
+}
+
+/*删除首页符号的下箭头*/
+.nav li:first-child em:after {
+    content: none;
+}
+
+/*删除下载专区的下箭头*/
+.nav li:last-child em:after {
+    content: none;
+}
+
+/*子菜单的基础设置*/
+.dropdown {
+    position: absolute;
+    top: 100%; 
+    left: 50%; 
+    opacity: 0;
+    pointer-events: none; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    visibility: hidden; 
+    transform: translateX(-50%) scaleY(0);  /*scaleY是放大或者缩小*/
+    transform-origin: top; /*从哪个方向开始动画效果*/
+    transition: opacity 0.6s ease, visibility 0.6s ease, transform 0.6s ease;
+    min-width: 200px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.6); 
+
+}
+
+.nav ul li:hover .dropdown {
+    opacity: 1;
+    pointer-events: auto; 
+    visibility: visible;
+    transform: translateX(-50%) scaleY(1); 
+}
+
+.dropdown ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+.dropdown ul li{
+    padding: 10px 10px;
+    margin:10px 10px;
+}
+
+.dropdown ul li:hover{
+    background: linear-gradient(to right, #D8F3FF, #FFFFFF);
+    color: #D8E8FF; 
+}
+
+.dropdown ul li a{
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+
+
+.footer-section {
+    background: #004b9b;
+    color: #fff;
+    padding: 40px 0 20px;
+    margin-top: 0px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 0.8fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-col h3 {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background: #4A90E2;
+}
+
+.contact-info p {
+    margin: 8px 0;
+    color: #e0e0e0;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-info a {
+    color:#e0e0e0;
+    text-decoration: none;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #e0e0e0;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.qr-code {
+    text-align: center;
+}
+
+.qr-code p {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #e0e0e0;
+}
+
+.footer-bottom {
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.copyright p {
+    color: #999;
+    font-size: 13px;
+    margin: 4px 0;
+}
+.bg{
+    width:100%;
+    height:30vh;
+    background-image: url(../images/1683194754839.jpg);
+    background-size: cover;
+    padding-top: 30px;
+    margin-top: 20px;
+}
